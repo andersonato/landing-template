@@ -1,20 +1,20 @@
 import Hero from "./Hero";
 import Features from "./Features";
 
+const componentMap = {
+  hero: Hero,
+  features: Features,
+};
+
 export default function SectionRenderer({ sections }) {
   return (
     <>
       {sections.map((section, index) => {
-        switch (section.type) {
-          case "hero":
-            return <Hero key={index} {...section.props} />;
+        const Component = componentMap[section.type];
 
-          case "features":
-            return <Features key={index} {...section.props} />;
+        if (!Component) return null;
 
-          default:
-            return null;
-        }
+        return <Component key={index} {...section.props} />;
       })}
     </>
   );
