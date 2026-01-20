@@ -1,33 +1,34 @@
-import { landingData } from "./data/landing";
+import Features from "./components/Features";
+
+const featuresData = [
+  {
+    title: "Entrega rápida",
+    description: "Landing pages profissionais entregues em poucas horas."
+  },
+  {
+    title: "Foco em conversão",
+    description: "Estrutura pensada para gerar leads e vendas."
+  },
+  {
+    title: "Design sob medida",
+    description: "Visual adaptado ao posicionamento do seu negócio."
+  }
+];
 
 export default function Home() {
   return (
     <main>
-      <section className="container">
-        <h1>{landingData.headline}</h1>
-        <p>{landingData.subheadline}</p>
-
-        <a
-          href={`mailto:${landingData.contactEmail}`}
-          className="button"
-        >
-          {landingData.ctaText}
-        </a>
+      <section className="hero">
+        <div className="container">
+          <h1>Criamos sites rápidos, claros e prontos para vender</h1>
+          <p>
+            Desenvolvemos landing pages profissionais com foco total em conversão.
+          </p>
+          <button>Solicitar proposta</button>
+        </div>
       </section>
 
-      <section className="container section">
-        <h2>Por que escolher</h2>
-        <ul>
-          {landingData.benefits.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="container section">
-        <h2>{landingData.proof.title}</h2>
-        <p>{landingData.proof.description}</p>
-      </section>
+      <Features items={featuresData} />
     </main>
   );
 }
