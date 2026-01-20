@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Uptovai — Soluções Digitais Inteligentes",
   description: "Transformamos ideias em presença digital com performance, clareza e tecnologia.",
