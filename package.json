@@ -1,6 +1,11 @@
 {
   "name": "uptovai-landing-template",
+  "version": "1.0.0",
   "private": true,
+  "description": "Template base de landing page em Next.js para uso comercial",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
