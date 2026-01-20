@@ -1,31 +1,27 @@
-import { siteConfig } from "../config";
+import { landingData } from "./data/landing";
 
 export default function Home() {
   return (
-    <main style={{ padding: "64px", fontFamily: "Arial, sans-serif" }}>
-      <section style={{ maxWidth: 720 }}>
-        <h1 style={{ fontSize: 42, marginBottom: 16 }}>
-          {siteConfig.headline}
-        </h1>
+    <main style={{ padding: 80, maxWidth: 900 }}>
+      <h1>{landingData.headline}</h1>
+      <p style={{ fontSize: 18 }}>{landingData.subheadline}</p>
 
-        <p style={{ fontSize: 18, marginBottom: 32 }}>
-          {siteConfig.description}
-        </p>
+      <button style={{ marginTop: 24, padding: "12px 24px" }}>
+        {landingData.ctaText}
+      </button>
 
-        <a
-          href={`mailto:${siteConfig.contactEmail}`}
-          style={{
-            display: "inline-block",
-            padding: "14px 28px",
-            background: "#000",
-            color: "#fff",
-            textDecoration: "none",
-            borderRadius: 6,
-            fontWeight: "bold",
-          }}
-        >
-          {siteConfig.ctaLabel}
-        </a>
+      <section style={{ marginTop: 60 }}>
+        <h2>Por que escolher?</h2>
+        <ul>
+          {landingData.benefits.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section style={{ marginTop: 60 }}>
+        <h2>{landingData.proof.title}</h2>
+        <p>{landingData.proof.description}</p>
       </section>
     </main>
   );
