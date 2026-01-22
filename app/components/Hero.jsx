@@ -10,9 +10,25 @@ export default function Hero({
     <section
       style={{
         padding: "140px 8% 120px",
-        background:
-          "linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 40%, #0f0f0f 100%)",
-        color: "#fff",
+        background: `
+          radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.06),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(0, 0, 0, 0.8),
+            transparent 55%
+          ),
+          linear-gradient(
+            180deg,
+            #0b0b0b 0%,
+            #111111 45%,
+            #0b0b0b 100%
+          )
+        `,
+        color: "#ffffff",
       }}
     >
       <div
