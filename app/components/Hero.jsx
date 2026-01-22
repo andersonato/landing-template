@@ -1,55 +1,8 @@
 export default function Hero({
   title,
   subtitle,
-  ctaText,
-  ctaLink,
-}) {
-  return (
-    <section
-      style={{
-        minHeight: "90vh",
-        display: "flex",
-        alignItems: "center",
-        padding: "0 8%",
-        background: "linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%)",
-      }}
-    >
-      <div style={{ maxWidth: "720px" }}>
-        <h1
-          style={{
-            fontSize: "3.5rem",
-            lineHeight: "1.1",
-            fontWeight: "700",
-            marginBottom: "24px",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          {title}
-        </h1>
-
-        <p
-          style={{
-            fontSize: "1.25rem",
-            lineHeight: "1.6",
-            color: "#444",
-            marginBottom: "40px",
-          }}
-        >
-          {subtitle}
-        </p>
-
-        <a
-          href={ctaLink}
-          style={{
-            display: "inline-block",
-            padding: "16px 32px",
-            backgroundColor: "#000",
-            color: "#fff",export default function Hero({
-  title,
-  subtitle,
   primaryCta,
   secondaryCta,
-  backgroundImage,
 }) {
   return (
     <section
@@ -58,18 +11,17 @@ export default function Hero({
         display: "flex",
         alignItems: "center",
         padding: "0 8%",
+        background:
+          "linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 40%, #0f0f0f 100%)",
         color: "#fff",
-        background: backgroundImage
-          ? `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${backgroundImage}) center/cover`
-          : "linear-gradient(135deg, #0f0f0f, #1a1a1a)",
       }}
     >
-      <div style={{ maxWidth: "820px" }}>
+      <div style={{ maxWidth: "720px" }}>
         <h1
           style={{
-            fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-            fontWeight: 800,
-            lineHeight: 1.05,
+            fontSize: "clamp(2.5rem, 5vw, 4rem)",
+            lineHeight: "1.05",
+            fontWeight: "700",
             marginBottom: "24px",
             letterSpacing: "-0.03em",
           }}
@@ -80,8 +32,8 @@ export default function Hero({
         <p
           style={{
             fontSize: "1.25rem",
-            opacity: 0.9,
-            maxWidth: "620px",
+            lineHeight: "1.6",
+            color: "#d1d1d1",
             marginBottom: "48px",
           }}
         >
@@ -92,46 +44,33 @@ export default function Hero({
           <a
             href={primaryCta.link}
             style={{
-              padding: "16px 36px",
-              background: "#facc15",
+              padding: "16px 32px",
+              backgroundColor: "#f5c451",
               color: "#000",
-              fontWeight: 700,
+              fontSize: "1rem",
+              fontWeight: "600",
               borderRadius: "10px",
               textDecoration: "none",
             }}
           >
-            {primaryCta.label}
+            {primaryCta.text}
           </a>
 
-          {secondaryCta && (
-            <a
-              href={secondaryCta.link}
-              style={{
-                padding: "16px 36px",
-                border: "2px solid #facc15",
-                color: "#facc15",
-                fontWeight: 600,
-                borderRadius: "10px",
-                textDecoration: "none",
-              }}
-            >
-              {secondaryCta.label}
-            </a>
-          )}
+          <a
+            href={secondaryCta.link}
+            style={{
+              padding: "16px 32px",
+              border: "1px solid #f5c451",
+              color: "#f5c451",
+              fontSize: "1rem",
+              fontWeight: "600",
+              borderRadius: "10px",
+              textDecoration: "none",
+            }}
+          >
+            {secondaryCta.text}
+          </a>
         </div>
-      </div>
-    </section>
-  );
-}
-
-            fontSize: "1rem",
-            fontWeight: "600",
-            borderRadius: "8px",
-            textDecoration: "none",
-          }}
-        >
-          {ctaText}
-        </a>
       </div>
     </section>
   );
