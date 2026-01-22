@@ -2,11 +2,17 @@ export const sections = [
   {
     type: "hero",
     props: {
-      headline: "Criamos sites rápidos, claros e prontos para vender",
-      subheadline:
-        "Sites e landing pages profissionais com foco total em conversão.",
-      ctaText: "Solicitar proposta",
-      contactEmail: "contato@uptovai.com",
+      title: "Criamos sites rápidos, claros e prontos para vender",
+      subtitle:
+        "Desenvolvemos landing pages profissionais em poucas horas, com foco total em conversão e performance.",
+      primaryCta: {
+        text: "Solicitar proposta",
+        link: "/contato",
+      },
+      secondaryCta: {
+        text: "Falar no WhatsApp",
+        link: "https://wa.me/5599999999999",
+      },
     },
   },
   {
