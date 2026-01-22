@@ -18,7 +18,12 @@ export default function SectionRenderer({ sections = [] }) {
       {sections.map((section, index) => {
         const Component = components[section.type];
         if (!Component) return null;
-        return <Component key={index} {...section.props} />;
+
+        return (
+          <div key={index} style={{ width: "100%", overflow: "hidden" }}>
+            <Component {...section.props} />
+          </div>
+        );
       })}
     </>
   );
