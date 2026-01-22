@@ -5,9 +5,25 @@ export default function Gallery({ title, subtitle, images = [] }) {
     <section
       style={{
         padding: "160px 6%",
-        background:
-          "linear-gradient(180deg, #0b0b0b 0%, #0f0f0f 100%)",
-        color: "#fff",
+        background: `
+          radial-gradient(
+            circle at top,
+            rgba(255, 255, 255, 0.05),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at bottom,
+            rgba(0, 0, 0, 0.85),
+            transparent 55%
+          ),
+          linear-gradient(
+            180deg,
+            #0b0b0b 0%,
+            #0f0f0f 50%,
+            #0b0b0b 100%
+          )
+        `,
+        color: "#ffffff",
       }}
     >
       <div
@@ -34,7 +50,7 @@ export default function Gallery({ title, subtitle, images = [] }) {
           <p
             style={{
               fontSize: "1.15rem",
-              color: "#bdbdbd",
+              color: "#cfcfcf",
               marginBottom: "72px",
               textAlign: "center",
               maxWidth: "760px",
@@ -50,7 +66,7 @@ export default function Gallery({ title, subtitle, images = [] }) {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(12, 1fr)",
-            gap: "24px",
+            gap: "28px",
           }}
         >
           {images.map((src, index) => {
@@ -61,10 +77,12 @@ export default function Gallery({ title, subtitle, images = [] }) {
                 key={index}
                 style={{
                   gridColumn: isHero ? "span 6" : "span 3",
-                  height: isHero ? "420px" : "260px",
-                  borderRadius: "22px",
+                  height: isHero ? "440px" : "280px",
+                  borderRadius: "24px",
                   overflow: "hidden",
                   backgroundColor: "#1a1a1a",
+                  boxShadow:
+                    "0 40px 80px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.04)",
                 }}
               >
                 <img
@@ -74,6 +92,7 @@ export default function Gallery({ title, subtitle, images = [] }) {
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
+                    filter: "contrast(1.05) saturate(1.05)",
                   }}
                 />
               </div>
