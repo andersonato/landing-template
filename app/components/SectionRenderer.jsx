@@ -1,11 +1,13 @@
 import Hero from "./Hero";
 import Features from "./Features";
 import Services from "./Services";
+import Gallery from "./Gallery";
 
 const components = {
   hero: Hero,
   features: Features,
   services: Services,
+  gallery: Gallery,
 };
 
 export default function SectionRenderer({ sections = [] }) {
