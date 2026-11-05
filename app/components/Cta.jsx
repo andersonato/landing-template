@@ -1,82 +1,246 @@
-export default function Cta({
-  title,
-  subtitle,
-  primaryCta,
-  secondaryCta,
-}) {
-  if (!title) return null;
+
+"use client";
+
+import { useState } from "react";
+import { ArrowRight, Mail, MapPin, Phone, CheckCircle2 } from "lucide-react";
+
+export default function Cta({ contactInfo, navigateTo }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value,
+    }));
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const subject = encodeURIComponent(
+      `Architecture Service Inquiry - ${formData.service || "General Inquiry"}`
+    );
+
+    const body = encodeURIComponent(
+      `Name / Architecture Office: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Service: ${formData.service}\n\n` +
+      `Project Brief & Deadlines:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
+
+    setSubmitted(true);
+  }
 
   return (
-    <section
-      style={{
-        padding: "120px 8%",
-        background:
-          "linear-gradient(135deg, #f5c451 0%, #e0b43f 100%)",
-        color: "#000",
-        textAlign: "center",
-      }}
-    >
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-        <h2
-          style={{
-            fontSize: "2.6rem",
-            fontWeight: "700",
-            marginBottom: "16px",
-          }}
-        >
-          {title}
-        </h2>
+    <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-24">
+      <div className="mb-14">
+        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
+          Contact
+        </span>
 
-        {subtitle && (
-          <p
-            style={{
-              fontSize: "1.2rem",
-              marginBottom: "40px",
-              opacity: 0.85,
-            }}
+        <h1 className="mt-5 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">
+          Let's Discuss Your Project.
+        </h1>
+
+        <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-[#75685c]">
+          Tell me about your project, your requirements and your deadlines.
+          I'll be happy to discuss how I can support your practice.
+        </p>
+      </div>
+
+      <div className="grid gap-14 lg:grid-cols-12">
+        <div className="space-y-8 lg:col-span-4">
+          <div>
+            <h2 className="font-serif text-2xl text-[#2b2621]">
+              Direct Contact
+            </h2>
+
+            <p className="mt-3 text-sm font-light leading-relaxed text-[#75685c]">
+              You can contact me directly through the details below.
+            </p>
+          </div>
+
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="flex items-start gap-4"
           >
-            {subtitle}
-          </p>
-        )}
+            <Mail className="mt-1 text-[#8c7b6c]" size={19} />
 
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          {primaryCta?.text && primaryCta?.link && (
-            <a
-              href={primaryCta.link}
-              style={{
-                padding: "16px 32px",
-                backgroundColor: "#000",
-                color: "#fff",
-                borderRadius: "10px",
-                fontWeight: "600",
-                textDecoration: "none",
-              }}
-            >
-              {primaryCta.text}
-            </a>
-          )}
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
+                Email
+              </p>
 
-          {secondaryCta?.text && secondaryCta?.link && (
-            <a
-              href={secondaryCta.link}
-              style={{
-                padding: "16px 32px",
-                border: "2px solid #000",
-                color: "#000",
-                borderRadius: "10px",
-                fontWeight: "600",
-                textDecoration: "none",
-              }}
-            >
-              {secondaryCta.text}
-            </a>
+              <p className="mt-1 text-sm text-[#2b2621]">
+                {contactInfo.email}
+              </p>
+            </div>
+          </a>
+
+          <a
+            href={`https://wa.me/${contactInfo.phone.replace(/\D/g, "")}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-start gap-4"
+          >
+            <Phone className="mt-1 text-[#8c7b6c]" size={19} />
+
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
+                Phone / WhatsApp
+              </p>
+
+              <p className="mt-1 text-sm text-[#2b2621]">
+                {contactInfo.phone}
+              </p>
+            </div>
+          </a>
+
+          <div className="flex items-start gap-4">
+            <MapPin className="mt-1 text-[#8c7b6c]" size={19} />
+
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
+                Location
+              </p>
+
+              <p className="mt-1 text-sm text-[#2b2621]">
+                {contactInfo.location}
+              </p>
+            </div>
+          </div>
+
+          <div className="border-l-2 border-[#d8c3b0] bg-[#faf6f0] p-6">
+            <p className="font-serif text-lg italic leading-relaxed text-[#594d42]">
+              "Flexible architectural support, whenever your practice needs it."
+            </p>
+          </div>
+        </div>
+
+        <div className="border border-[#e6ddd3] bg-white p-7 md:p-10 lg:col-span-8">
+          <h2 className="mb-8 font-serif text-2xl text-[#2b2621]">
+            Send an Inquiry
+          </h2>
+
+          {submitted ? (
+            <div className="flex items-start gap-4 border border-[#d8c3b0] bg-[#faf6f0] p-6">
+              <CheckCircle2 className="mt-1 text-[#8c7b6c]" size={22} />
+
+              <div>
+                <h3 className="font-serif text-xl text-[#2b2621]">
+                  Your email application has been opened.
+                </h3>
+
+                <p className="mt-2 text-sm font-light leading-relaxed text-[#75685c]">
+                  Please review the message in your email application and
+                  send it to complete your inquiry.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <label className="block">
+                  <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
+                    Name / Architecture Office
+                  </span>
+
+                  <input
+                    required
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
+                    placeholder="Your name or office"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
+                    Email Address
+                  </span>
+
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
+                    placeholder="your@email.com"
+                  />
+                </label>
+              </div>
+
+              <label className="block">
+                <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
+                  Service Required
+                </span>
+
+                <select
+                  required
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none focus:border-[#8c7b6c]"
+                >
+                  <option value="">Select a service</option>
+                  <option value="Architectural Drafting & Technical Documentation">
+                    Architectural Drafting & Technical Documentation
+                  </option>
+                  <option value="3D Modelling and Rendering">
+                    3D Modelling and Rendering
+                  </option>
+                  <option value="Digitalisation & Image Editing">
+                    Digitalisation & Image Editing
+                  </option>
+                  <option value="Flexible Team Support">
+                    Flexible Team Support
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
+                  Project Brief & Deadlines
+                </span>
+
+                <textarea
+                  required
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={6}
+                  className="w-full resize-y border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
+                  placeholder="Tell me about your project, requirements and expected deadlines..."
+                />
+              </label>
+
+              <button
+                type="submit"
+                className="inline-flex items-center gap-3 bg-[#2b2621] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#8c7b6c]"
+              >
+                Send Inquiry
+                <ArrowRight size={14} />
+              </button>
+
+              <p className="text-[10px] leading-relaxed text-[#a89787]">
+                Submitting opens your default email application with the
+                inquiry details prepared. You must send the email there.
+              </p>
+            </form>
           )}
         </div>
       </div>

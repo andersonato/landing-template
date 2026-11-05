@@ -1,108 +1,77 @@
-export default function Hero({
-  title,
-  subtitle,
-  primaryCta,
-  secondaryCta,
-}) {
-  if (!title) return null;
 
+import { ArrowRight, Grid, Sparkles } from "lucide-react";
+
+export default function Hero({ navigateTo, scrollToSolutions }) {
   return (
-    <section
-      style={{
-        padding: "140px 8% 120px",
-        background: `
-          radial-gradient(
-            circle at top left,
-            rgba(255, 255, 255, 0.06),
-            transparent 45%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(0, 0, 0, 0.8),
-            transparent 55%
-          ),
-          linear-gradient(
-            180deg,
-            #0b0b0b 0%,
-            #111111 45%,
-            #0b0b0b 100%
-          )
-        `,
-        color: "#ffffff",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
-            lineHeight: "1.05",
-            fontWeight: "700",
-            marginBottom: "24px",
-            letterSpacing: "-0.03em",
-          }}
-        >
-          {title}
-        </h1>
+    <section className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl flex-col justify-center px-6 pb-20 pt-36 md:px-12 lg:px-24">
+      <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="space-y-8 lg:col-span-7">
+          <div className="inline-flex items-center gap-2 border border-[#d8c3b0] bg-[#f4eee8] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-[#8c7b6c]">
+            <Sparkles size={12} />
+            Architectural Technical Support Services
+          </div>
 
-        {subtitle && (
-          <p
-            style={{
-              fontSize: "1.3rem",
-              lineHeight: "1.6",
-              color: "#d1d1d1",
-              marginBottom: "48px",
-              maxWidth: "720px",
-            }}
-          >
-            {subtitle}
+          <h1 className="font-serif text-4xl font-light leading-[1.1] tracking-tight text-[#2b2621] sm:text-6xl lg:text-7xl">
+            You focus on the ideas.
+            <br />
+            <span className="font-normal italic text-[#8c7b6c]">
+              I'll help you bring them to life.
+            </span>
+          </h1>
+
+          <p className="max-w-2xl text-base font-light leading-relaxed text-[#594d42] sm:text-lg">
+            Reliable, professional remote technical support for architecture
+            practices. Helping teams manage workloads, prepare technical
+            documentation, and meet project deadlines effortlessly.
           </p>
-        )}
 
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            flexWrap: "wrap",
-          }}
-        >
-          {primaryCta?.text && primaryCta?.link && (
-            <a
-              href={primaryCta.link}
-              style={{
-                padding: "16px 32px",
-                backgroundColor: "#f5c451",
-                color: "#000",
-                fontSize: "1rem",
-                fontWeight: "600",
-                borderRadius: "10px",
-                textDecoration: "none",
-              }}
+          <div className="flex flex-wrap items-center gap-4 pt-4">
+            <button
+              onClick={() => navigateTo("projects")}
+              className="flex items-center gap-3 bg-[#2b2621] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#8c7b6c]"
             >
-              {primaryCta.text}
-            </a>
-          )}
+              View Real Projects
+              <Grid size={14} />
+            </button>
 
-          {secondaryCta?.text && secondaryCta?.link && (
-            <a
-              href={secondaryCta.link}
-              style={{
-                padding: "16px 32px",
-                border: "1px solid #f5c451",
-                color: "#f5c451",
-                fontSize: "1rem",
-                fontWeight: "600",
-                borderRadius: "10px",
-                textDecoration: "none",
-              }}
+            <button
+              onClick={scrollToSolutions}
+              className="border border-[#b8a798] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-[#2b2621] transition-all hover:bg-[#f4eee8]"
             >
-              {secondaryCta.text}
-            </a>
-          )}
+              Explore Services
+            </button>
+          </div>
+        </div>
+
+        <div className="relative lg:col-span-5">
+          <button
+            onClick={() => navigateTo("projects")}
+            className="group relative block w-full cursor-pointer border border-[#d8c3b0] bg-white p-3 text-left shadow-xl"
+            aria-label="View architectural projects"
+          >
+            <img
+              src="/project-01.webp"
+              alt="Modern Villa with Gym and Pool"
+              className="h-[420px] w-full object-cover brightness-[0.98] contrast-[1.02] transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+
+            <div className="flex items-center justify-between border-t border-[#f0e6dc] bg-[#faf6f0] p-4">
+              <div>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#8c7b6c]">
+                  Featured Project
+                </span>
+
+                <p className="mt-0.5 font-serif text-sm italic text-[#2b2621]">
+                  Modern Villa with Gym & Poolside Terrace
+                </p>
+              </div>
+
+              <span className="flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-[#8c7b6c] transition-colors group-hover:text-[#2b2621]">
+                View All
+                <ArrowRight size={12} />
+              </span>
+            </div>
+          </button>
         </div>
       </div>
     </section>
