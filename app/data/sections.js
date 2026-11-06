@@ -1,65 +1,14 @@
-
 export const projectImages = [
-  {
-    id: 1,
-    src: "/project-01.webp",
-    title: "Modern Villa with Gym & Pool",
-    category: "Exterior & 3D Visualisation",
-  },
-  {
-    id: 2,
-    src: "/project-02.webp",
-    title: "Luxury Residence Patio & Poolside",
-    category: "3D Modelling",
-  },
-  {
-    id: 3,
-    src: "/project-03.webp",
-    title: "Hillside Modern Villa Complex",
-    category: "Architectural Rendering",
-  },
-  {
-    id: 4,
-    src: "/project-04.webp",
-    title: "Covered Outdoor Dining & Wood Facade",
-    category: "Interior & Veranda",
-  },
-  {
-    id: 5,
-    src: "/project-05.webp",
-    title: "Two-Story Contemporary Villa & Pool",
-    category: "Exterior Design",
-  },
-  {
-    id: 6,
-    src: "/project-06.webp",
-    title: "Terrace Barbecue & Palm Garden",
-    category: "Lighting & Material Render",
-  },
-  {
-    id: 7,
-    src: "/project-07.webp",
-    title: "Glass Balcony & Stone Elevation Detail",
-    category: "Architectural Drafting & 3D",
-  },
-  {
-    id: 8,
-    src: "/project-08.webp",
-    title: "Dusk Stone Residence & Mountain View",
-    category: "Atmospheric Rendering",
-  },
-  {
-    id: 9,
-    src: "/project-09.webp",
-    title: "Evening Poolside Pavilion & Lounge",
-    category: "Lighting Study",
-  },
-  {
-    id: 10,
-    src: "/project-10.webp",
-    title: "Natural Stone House & Infinity Pool",
-    category: "3D Modelling & Exterior",
-  },
+  { id: 1, slug: "casa-hu", src: "/project-01.webp", title: "Casa HU — Modern Villa with Gym & Pool", category: "Residential Architecture · 3D Visualisation", description: "Contemporary residential architecture with swimming pool, outdoor living areas and integrated gym.", images: ["/project-01.webp"], video: "/projects/casa-hu/video.mp4" },
+  { id: 2, slug: "luxury-residence-patio", src: "/project-02.webp", title: "Luxury Residence Patio & Poolside", category: "3D Modelling", images: ["/project-02.webp"] },
+  { id: 3, slug: "hillside-villa-complex", src: "/project-03.webp", title: "Hillside Modern Villa Complex", category: "Architectural Rendering", images: ["/project-03.webp"] },
+  { id: 4, slug: "covered-outdoor-dining", src: "/project-04.webp", title: "Covered Outdoor Dining & Wood Facade", category: "Interior & Veranda", images: ["/project-04.webp"] },
+  { id: 5, slug: "two-storey-contemporary-villa", src: "/project-05.webp", title: "Two-Story Contemporary Villa & Pool", category: "Exterior Design", images: ["/project-05.webp"] },
+  { id: 6, slug: "terrace-barbecue-palm-garden", src: "/project-06.webp", title: "Terrace Barbecue & Palm Garden", category: "Lighting & Material Render", images: ["/project-06.webp"] },
+  { id: 7, slug: "glass-balcony-stone-elevation", src: "/project-07.webp", title: "Glass Balcony & Stone Elevation Detail", category: "Architectural Drafting & 3D", images: ["/project-07.webp"] },
+  { id: 8, slug: "dusk-stone-residence", src: "/project-08.webp", title: "Dusk Stone Residence & Mountain View", category: "Atmospheric Rendering", images: ["/project-08.webp"] },
+  { id: 9, slug: "evening-poolside-pavilion", src: "/project-09.webp", title: "Evening Poolside Pavilion & Lounge", category: "Lighting Study", images: ["/project-09.webp"] },
+  { id: 10, slug: "natural-stone-infinity-pool", src: "/project-10.webp", title: "Natural Stone House & Infinity Pool", category: "3D Modelling & Exterior", images: ["/project-10.webp"] },
 ];
 
 export const serviceDetails = {
