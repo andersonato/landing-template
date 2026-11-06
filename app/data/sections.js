@@ -1,5 +1,5 @@
 export const projectImages = [
-  { id: 1, slug: "casa-hu", src: "/project-01.webp", title: "Casa HU — Modern Villa with Gym & Pool", category: "Residential Architecture · 3D Visualisation", description: "Contemporary residential architecture with swimming pool, outdoor living areas and integrated gym.", images: ["/project-01.webp"], video: "/projects/casa-hu/video.mp4" },
+  { id: 1, slug: "casa-hu", src: "/projects/casa-hu/cover.webp", title: "Casa HU — Modern Villa with Gym & Pool", category: "Residential Architecture · 3D Visualisation", description: "Contemporary residential architecture with swimming pool, outdoor living areas and integrated gym.", images: ["/projects/casa-hu/image-01.webp", "/projects/casa-hu/image-02.webp", "/projects/casa-hu/image-03.webp"], video: "/projects/casa-hu/video.mp4" },
   { id: 2, slug: "luxury-residence-patio", src: "/project-02.webp", title: "Luxury Residence Patio & Poolside", category: "3D Modelling", images: ["/project-02.webp"] },
   { id: 3, slug: "hillside-villa-complex", src: "/project-03.webp", title: "Hillside Modern Villa Complex", category: "Architectural Rendering", images: ["/project-03.webp"] },
   { id: 4, slug: "covered-outdoor-dining", src: "/project-04.webp", title: "Covered Outdoor Dining & Wood Facade", category: "Interior & Veranda", images: ["/project-04.webp"] },
