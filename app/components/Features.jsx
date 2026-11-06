@@ -1,23 +1,4 @@
-
-import { CheckCircle2, Globe, UserCheck, Clock, ArrowRight } from "lucide-react";
-
-const highlights = [
-  {
-    icon: Clock,
-    title: "Meet Deadlines",
-    description: "Reliable support to help your practice manage workloads and deliver projects on time.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "High-Quality Outputs",
-    description: "Accurate technical documentation and carefully prepared visual materials.",
-  },
-  {
-    icon: UserCheck,
-    title: "Flexible Collaboration",
-    description: "External support whenever your team needs additional capacity.",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 const solutions = [
   ["Extra support for your team", "An external collaborator who integrates with your workflow."],
@@ -103,28 +84,6 @@ export default function Features({ variant = "home", navigateTo }) {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-24">
-      <div className="grid gap-8 border-b border-[#e6ddd3] pb-20 md:grid-cols-3">
-        {highlights.map((item) => {
-          const Icon = item.icon;
-
-          return (
-            <div key={item.title} className="space-y-4">
-              <div className="flex h-11 w-11 items-center justify-center border border-[#d8c3b0] text-[#8c7b6c]">
-                <Icon size={20} />
-              </div>
-
-              <h3 className="font-serif text-2xl text-[#2b2621]">
-                {item.title}
-              </h3>
-
-              <p className="text-sm font-light leading-relaxed text-[#75685c]">
-                {item.description}
-              </p>
-            </div>
-          );
-        })}
-      </div>
-
       <div className="py-20">
         <div className="mb-12 max-w-2xl">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
