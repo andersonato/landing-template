@@ -2,12 +2,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import {
-  X,
-  Clock,
-  FileText,
-  UserCheck,
-} from "lucide-react";
+import { Clock, FileText, UserCheck } from "lucide-react";
 
 import {
   projectImages,
@@ -25,7 +20,6 @@ import Cta from "./Cta";
 export default function SectionRenderer() {
   const [view, setView] = useState("home");
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const carouselRef = useRef(null);
 
@@ -71,54 +65,6 @@ export default function SectionRenderer() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#fbf9f6] font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(#8c7b6c_1px,transparent_1px)] opacity-20 [background-size:24px_24px]" />
-
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-[#1a1714]/90 p-4 backdrop-blur-md sm:p-8"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className="relative w-full max-w-5xl overflow-hidden border border-[#e8dfd5] bg-white p-3 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center bg-[#2b2621] text-white transition-colors hover:bg-[#8c7b6c]"
-              aria-label="Close image"
-            >
-              <X size={18} />
-            </button>
-
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.title}
-              className="max-h-[75vh] w-full bg-[#faf6f0] object-contain"
-            />
-
-            <div className="flex flex-col justify-between gap-2 border-t border-[#f0e6dc] bg-[#faf6f0] p-4 sm:flex-row sm:items-center">
-              <div>
-                <h3 className="font-serif text-lg font-bold text-[#2b2621]">
-                  {selectedImage.title}
-                </h3>
-
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8c7b6c]">
-                  {selectedImage.category}
-                </span>
-              </div>
-
-              <button
-                onClick={() => {
-                  setSelectedImage(null);
-                  navigateTo("contact");
-                }}
-                className="self-start bg-[#8c7b6c] px-5 py-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#2b2621] sm:self-auto"
-              >
-                Inquire About This Style
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       <nav className="fixed z-[100] flex w-full items-center justify-between border-b border-[#e8dfd5] bg-[#fbf9f6]/90 px-6 py-5 backdrop-blur-md md:px-12">
         <button
@@ -228,7 +174,6 @@ export default function SectionRenderer() {
         {view === "projects" && (
           <Gallery
             projects={projectImages}
-            setSelectedImage={setSelectedImage}
             navigateTo={navigateTo}
           />
         )}
