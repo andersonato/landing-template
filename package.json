@@ -4,7 +4,7 @@
   "private": true,
   "description": "Template base de landing page em Next.js para uso comercial",
   "engines": {
-    "node": ">=18"
+    "node": ">=20.9.0 <25"
   },
   "scripts": {
     "dev": "next dev",
