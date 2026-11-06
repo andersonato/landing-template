@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Clock, FileText, UserCheck } from "lucide-react";
 
 import {
@@ -20,6 +20,11 @@ import Cta from "./Cta";
 export default function SectionRenderer() {
   const [view, setView] = useState("home");
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const requestedView = new URLSearchParams(window.location.search).get("view");
+    if (requestedView === "projects") setView("projects");
+  }, []);
 
   const carouselRef = useRef(null);
 
