@@ -40,7 +40,7 @@ export default function Services({
           className="mb-10 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c] transition-colors hover:text-[#2b2621]"
         >
           <ArrowLeft size={14} />
-          Back to Home
+          {t("backHome")}
         </button>
 
         <div className="grid items-start gap-12 lg:grid-cols-2">
@@ -48,7 +48,7 @@ export default function Services({
             <div className="mb-6 flex items-center gap-4">
               <Icon size={34} className="text-[#8c7b6c]" />
               <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
-                Architectural Services
+                {t("architecturalServices")}
               </span>
             </div>
 
@@ -64,7 +64,7 @@ export default function Services({
               onClick={() => navigateTo?.("contact")}
               className="inline-flex items-center gap-3 bg-[#8c7b6c] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-[#2b2621]"
             >
-              Request a Proposal
+              {t("requestProposal")}
               <ArrowRight size={15} />
             </button>
           </div>
@@ -81,11 +81,11 @@ export default function Services({
         <div className="mt-20 grid gap-12 border-t border-[#e8dfd5] pt-12 md:grid-cols-2">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
-              What We Deliver
+              {t("whatDeliver")}
             </span>
 
             <h2 className="mb-8 mt-3 font-serif text-2xl font-bold text-[#2b2621]">
-              Scope of Services
+              {t("scopeServices")}
             </h2>
 
             <div className="space-y-5">
@@ -105,11 +105,11 @@ export default function Services({
 
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
-              Our Process
+              {t("ourProcess")}
             </span>
 
             <h2 className="mb-8 mt-3 font-serif text-2xl font-bold text-[#2b2621]">
-              Workflow
+              {t("workflow")}
             </h2>
 
             <div className="space-y-6">
@@ -133,7 +133,7 @@ export default function Services({
 
         <div className="mt-20 border border-[#e8dfd5] bg-[#f4eee8] p-8 text-center md:p-12">
           <h2 className="font-serif text-2xl font-bold text-[#2b2621] md:text-3xl">
-            Need support with your next project?
+            {t("needSupport")}
           </h2>
 
           <p className="mx-auto mb-7 mt-4 max-w-xl text-sm leading-7 text-[#594d42]">
@@ -145,7 +145,7 @@ export default function Services({
             onClick={() => navigateTo?.("contact")}
             className="inline-flex items-center gap-3 bg-[#8c7b6c] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-[#2b2621]"
           >
-            Get in Touch
+            {t("getInTouch")}
             <ArrowRight size={15} />
           </button>
         </div>
@@ -182,11 +182,11 @@ export default function Services({
       <div className="mb-12 flex items-end justify-between gap-6">
         <div>
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
-            Services Offered
+            {t("servicesOffered")}
           </span>
 
           <h2 className="mt-3 max-w-2xl font-serif text-3xl text-[#2b2621] md:text-4xl">
-            Three Ways to Bring Your Projects to Life
+            {t("servicesHeading")}
           </h2>
         </div>
 
@@ -194,7 +194,7 @@ export default function Services({
           <button
             type="button"
             onClick={() => handleScroll("left")}
-            aria-label="Previous services"
+            aria-label="{t("previousServices")}"
             className="border border-[#d8c3b0] p-3 text-[#2b2621] transition-all hover:bg-[#8c7b6c] hover:text-white"
           >
             <ChevronLeft size={17} />
@@ -203,7 +203,7 @@ export default function Services({
           <button
             type="button"
             onClick={() => handleScroll("right")}
-            aria-label="Next services"
+            aria-label="{t("nextServices")}"
             className="border border-[#d8c3b0] p-3 text-[#2b2621] transition-all hover:bg-[#8c7b6c] hover:text-white"
           >
             <ChevronRight size={17} />
@@ -238,7 +238,7 @@ export default function Services({
                   <Icon size={25} className="text-[#8c7b6c]" />
 
                   <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#8c7b6c]">
-                    Core Service
+                    {t("coreService")}
                   </span>
                 </div>
 
@@ -251,7 +251,7 @@ export default function Services({
                 </p>
 
                 <div className="mt-7 flex items-center justify-between border-t border-[#f0e6dc] pt-5 text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
-                  <span>View Service Scope</span>
+                  <span>{t("viewScope")}</span>
 
                   <ArrowRight
                     size={15}
@@ -266,7 +266,7 @@ export default function Services({
 
       <div className="mt-8 flex items-center justify-between">
         <p className="text-[10px] uppercase tracking-[0.15em] text-[#8c7b6c]">
-          Explore all available services
+          {t("exploreAll")}
         </p>
 
         <button
@@ -274,7 +274,7 @@ export default function Services({
           onClick={() => navigateTo?.("contact")}
           className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#2b2621] transition-colors hover:text-[#8c7b6c]"
         >
-          Discuss a Project
+          {t("discussProject")}
           <ArrowRight size={14} />
         </button>
       </div>
