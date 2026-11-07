@@ -138,8 +138,7 @@ export default function Services({
           </h2>
 
           <p className="mx-auto mb-7 mt-4 max-w-xl text-sm leading-7 text-[#594d42]">
-            Tell me about your project requirements and receive a tailored
-            proposal.
+            {t("tailoredProposal")}
           </p>
 
           <button
