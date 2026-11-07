@@ -1,12 +1,12 @@
 import { ArrowRight } from "lucide-react";
 
-const solutions = [
-  ["Extra support for your team", "An external collaborator who integrates with your workflow."],
-  ["Help with specific tasks", "Clearly defined deliverables and agreed deadlines."],
-  ["Presentations for your clients", "Professional 3D models and architectural visualisations."],
-  ["Managing peak workloads", "One-off or ongoing technical support."],
-  ["Work without expanding your team", "Remote collaboration with an agreed scope, timeline and budget."],
-  ["International standards", "Communication and collaboration in English, Portuguese and Spanish."],
+const solutionKeys = [
+  ["extraSupport", "extraSupportDesc"],
+  ["specificTasks", "specificTasksDesc"],
+  ["presentations", "presentationsDesc"],
+  ["peakWorkloads", "peakWorkloadsDesc"],
+  ["expandTeam", "expandTeamDesc"],
+  ["international", "internationalDesc"],
 ];
 
 export default function Features({ variant = "home", navigateTo, t }) {
