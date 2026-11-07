@@ -1,16 +1,11 @@
 
-import { ArrowRight, Grid, Sparkles } from "lucide-react";
+import { ArrowRight, Grid } from "lucide-react";
 
 export default function Hero({ navigateTo, scrollToSolutions }) {
   return (
     <section className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl flex-col justify-center px-6 pb-20 pt-36 md:px-12 lg:px-24">
       <div className="grid items-center gap-12 lg:grid-cols-12">
         <div className="space-y-8 lg:col-span-7">
-          <div className="inline-flex items-center gap-2 border border-[#d8c3b0] bg-[#f4eee8] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-[#8c7b6c]">
-            <Sparkles size={12} />
-            Architectural Technical Support Services
-          </div>
-
           <h1 className="font-serif text-4xl font-light leading-[1.1] tracking-tight text-[#2b2621] sm:text-6xl lg:text-7xl">
             You focus on the ideas.
             <br />
