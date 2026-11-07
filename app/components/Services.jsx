@@ -223,7 +223,7 @@ export default function Services({
               key={item.id}
               type="button"
               onClick={() => navigateTo?.(item.id)}
-              className="group flex min-w-[280px] snap-start flex-col border border-[#e6ddd3] bg-white text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#b8a798] hover:shadow-lg md:min-w-[320px]"
+              className="group flex h-[560px] min-w-[280px] snap-start flex-col border border-[#e6ddd3] bg-white text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#b8a798] hover:shadow-lg md:min-w-[320px]"
             >
               <div className="h-52 w-full overflow-hidden border-b border-[#f0e6dc]">
                 <img
@@ -242,11 +242,11 @@ export default function Services({
                   </span>
                 </div>
 
-                <h3 className="mb-4 font-serif text-xl font-bold leading-snug text-[#2b2621]">
+                <h3 className="mb-4 min-h-[112px] font-serif text-xl font-bold leading-snug text-[#2b2621]">
                   {item.title}
                 </h3>
 
-                <p className="flex-1 text-xs font-light leading-7 text-[#594d42]">
+                <p className="min-h-[84px] flex-1 text-xs font-light leading-7 text-[#594d42]">
                   {item.tagline}
                 </p>
 
