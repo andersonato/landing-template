@@ -194,7 +194,7 @@ export default function Services({
           <button
             type="button"
             onClick={() => handleScroll("left")}
-            aria-label="{t("previousServices")}"
+            aria-label={t("previousServices")}
             className="border border-[#d8c3b0] p-3 text-[#2b2621] transition-all hover:bg-[#8c7b6c] hover:text-white"
           >
             <ChevronLeft size={17} />
@@ -203,7 +203,7 @@ export default function Services({
           <button
             type="button"
             onClick={() => handleScroll("right")}
-            aria-label="{t("nextServices")}"
+            aria-label={t("nextServices")}
             className="border border-[#d8c3b0] p-3 text-[#2b2621] transition-all hover:bg-[#8c7b6c] hover:text-white"
           >
             <ChevronRight size={17} />
