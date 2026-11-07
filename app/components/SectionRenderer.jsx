@@ -22,6 +22,12 @@ export default function SectionRenderer() {
     if (savedLanguage && ["en", "pt", "es"].includes(savedLanguage)) setLanguage(savedLanguage);
     const requestedView = new URLSearchParams(window.location.search).get("view");
     if (requestedView === "projects") setView("projects");
+
+    const syncLanguage = (event) => {
+      if (["en", "pt", "es"].includes(event.detail)) setLanguage(event.detail);
+    };
+    window.addEventListener("uptovai-language-change", syncLanguage);
+    return () => window.removeEventListener("uptovai-language-change", syncLanguage);
   }, []);
 
   useEffect(() => {
