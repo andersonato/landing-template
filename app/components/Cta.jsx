@@ -51,7 +51,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-24">
+    <section className="mx-auto max-w-7xl px-6 pb-20 pt-32 md:px-12 lg:px-24">
       <div className="mb-14">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
           {t("contact")}
