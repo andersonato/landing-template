@@ -176,7 +176,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
-                    placeholder="your@email.com"
+                    placeholder={t("emailPlaceholder")}
                   />
                 </label>
               </div>
