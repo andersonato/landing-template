@@ -39,10 +39,10 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
     };
 
     const body = encodeURIComponent(
-      `${t("nameOffice")}: ${formData.name}\\n` +
-      `${t("emailAddress")}: ${formData.email}\\n` +
-      `${t("serviceRequired")}: ${serviceLabels[formData.service] || formData.service}\\n\\n` +
-      `${t("projectBrief")}:\\n${formData.message}`
+      `${t("nameOffice")}: ${formData.name}\n` +
+      `${t("emailAddress")}: ${formData.email}\n` +
+      `${t("serviceRequired")}: ${serviceLabels[formData.service] || formData.service}\n\n` +
+      `${t("projectBrief")}:\n${formData.message}`
     );
 
     window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
