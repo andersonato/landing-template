@@ -18,15 +18,15 @@ import Gallery from "./Gallery";
 import Cta from "./Cta";
 
 export default function SectionRenderer() {
-  const [view, setView] = useState("home");\n  const [language, setLanguage] = useState("en");\n  const t = (key) => getTranslation(language, key);
+  const [view, setView] = useState("home");\n  const [language, setLanguage] = useState("en");\n  const t = (key) => getTranslation(language, key);\n  const [language, setLanguage] = useState("en");\n  const t = (key) => getTranslation(language, key);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    const requestedView = new URLSearchParams(window.location.search).get("view");
+    const savedLanguage = window.localStorage.getItem("uptovai-language");\n    if (savedLanguage && ["en", "pt", "es"].includes(savedLanguage)) setLanguage(savedLanguage);\n    const requestedView = new URLSearchParams(window.location.search).get("view");
     if (requestedView === "projects") setView("projects");
   }, []);
 
-  const carouselRef = useRef(null);\n\n  useEffect(() => {\n    document.documentElement.lang = language;\n    window.localStorage.setItem("uptovai-language", language);\n  }, [language]);
+  const carouselRef = useRef(null);\n\n  useEffect(() => {\n    document.documentElement.lang = language;\n    window.localStorage.setItem("uptovai-language", language);\n  }, [language]);\n\n  useEffect(() => {\n    document.documentElement.lang = language;\n    window.localStorage.setItem("uptovai-language", language);\n  }, [language]);
 
   const navigateTo = useCallback(
     (newView) => {
