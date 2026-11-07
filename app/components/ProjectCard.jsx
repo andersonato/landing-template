@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export default function ProjectCard({ project, index = 0 }) {
+export default function ProjectCard({ project, index = 0, t }) {
   return (
-    <Link href={`/projects/${project.slug}`} aria-label={`View project: ${project.title}`} className="group block text-left">
+    <Link href={`/projects/${project.slug}`} aria-label={`${t("viewProject")}: ${project.title}`} className="group block text-left">
       <div className="relative overflow-hidden bg-[#f4eee8]">
         <img src={project.src} alt={project.title} loading={index < 3 ? "eager" : "lazy"} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 flex items-center justify-center bg-[#2b2621]/0 transition-all duration-300 group-hover:bg-[#2b2621]/25">
