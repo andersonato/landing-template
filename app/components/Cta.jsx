@@ -30,11 +30,19 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
       `${language === "pt" ? "Pedido de Serviço de Arquitetura" : language === "es" ? "Consulta de Servicios de Arquitectura" : "Architecture Service Inquiry"} - ${formData.service || (language === "pt" ? "Pedido Geral" : language === "es" ? "Consulta General" : "General Inquiry")}`
     );
 
+    const serviceLabels = {
+      "Architectural Drafting & Technical Documentation": language === "pt" ? "Desenho Técnico e Documentação de Arquitetura" : language === "es" ? "Dibujo Arquitectónico y Documentación Técnica" : "Architectural Drafting & Technical Documentation",
+      "3D Modelling and Rendering": language === "pt" ? "Modelação 3D e Renderização" : language === "es" ? "Modelado 3D y Renderizado" : "3D Modelling and Rendering",
+      "Digitalisation & Image Editing": language === "pt" ? "Digitalização e Edição de Imagem" : language === "es" ? "Digitalización y Edición de Imágenes" : "Digitalisation & Image Editing",
+      "Flexible Team Support": language === "pt" ? "Apoio Flexível a Equipas" : language === "es" ? "Apoyo Flexible a Equipos" : "Flexible Team Support",
+      Other: t("other"),
+    };
+
     const body = encodeURIComponent(
-      `{t("nameOffice")}: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Service: ${formData.service}\n\n` +
-      `{t("projectBrief")}:\n${formData.message}`
+      `${t("nameOffice")}: ${formData.name}\\n` +
+      `${t("emailAddress")}: ${formData.email}\\n` +
+      `${t("serviceRequired")}: ${serviceLabels[formData.service] || formData.service}\\n\\n` +
+      `${t("projectBrief")}:\\n${formData.message}`
     );
 
     window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
@@ -78,7 +86,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
 
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
-                Email
+                {t("emailAddress")}
               </p>
 
               <p className="mt-1 text-sm text-[#2b2621]">
@@ -194,18 +202,10 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                   className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none focus:border-[#8c7b6c]"
                 >
                   <option value="">{t("selectService")}</option>
-                  <option value="Architectural Drafting & Technical Documentation">
-                    Architectural Drafting & Technical Documentation
-                  </option>
-                  <option value="3D Modelling and Rendering">
-                    3D Modelling and Rendering
-                  </option>
-                  <option value="Digitalisation & Image Editing">
-                    Digitalisation & Image Editing
-                  </option>
-                  <option value="Flexible Team Support">
-                    Flexible Team Support
-                  </option>
+                  <option value="Architectural Drafting & Technical Documentation">{language === "pt" ? "Desenho Técnico e Documentação de Arquitetura" : language === "es" ? "Dibujo Arquitectónico y Documentación Técnica" : "Architectural Drafting & Technical Documentation"}</option>
+                  <option value="3D Modelling and Rendering">{language === "pt" ? "Modelação 3D e Renderização" : language === "es" ? "Modelado 3D y Renderizado" : "3D Modelling and Rendering"}</option>
+                  <option value="Digitalisation & Image Editing">{language === "pt" ? "Digitalização e Edição de Imagem" : language === "es" ? "Digitalización y Edición de Imágenes" : "Digitalisation & Image Editing"}</option>
+                  <option value="Flexible Team Support">{language === "pt" ? "Apoio Flexível a Equipas" : language === "es" ? "Apoyo Flexible a Equipos" : "Flexible Team Support"}</option>
                   <option value="Other">{t("other")}</option>
                 </select>
               </label>
