@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Clock, FileText, UserCheck } from "lucide-react";
-import { getTranslation } from "../data/translations";
+import { getTranslation, getLocalizedService, getLocalizedProject } from "../data/translations";
 import { projectImages, serviceDetails, navigationLinks, contactInfo } from "../data/sections";
 import Hero from "./Hero";
 import Features from "./Features";
@@ -51,7 +51,9 @@ export default function SectionRenderer() {
     name: t(link.id),
     action: () => navigateTo(link.id),
   }));
-  const activeService = serviceDetails[view];
+  const activeService = serviceDetails[view] ? getLocalizedService(serviceDetails[view], language) : null;
+  const localizedProjects = projectImages.map((project) => getLocalizedProject(project, language));
+  const localizedServices = Object.fromEntries(Object.entries(serviceDetails).map(([key, service]) => [key, getLocalizedService(service, language)]));
 
   const highlights = [
     { icon: Clock, title: "meetDeadlines", description: "meetDeadlinesDesc" },
@@ -62,22 +64,22 @@ export default function SectionRenderer() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#fbf9f6] font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(#8c7b6c_1px,transparent_1px)] opacity-20 [background-size:24px_24px]" />
-      <nav className="fixed z-[100] flex w-full items-center justify-between border-b border-[#e8dfd5] bg-[#fbf9f6]/90 px-6 py-5 backdrop-blur-md md:px-12">
+      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 border-b border-[#e8dfd5] bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
         <button onClick={() => navigateTo("home")} className="flex cursor-pointer flex-col text-left">
           <span className="font-serif text-xs font-bold tracking-[0.18em] text-[#2b2621] sm:text-sm">ELISSANDRA OLIVEIRA</span>
           <span className="font-mono text-[8px] tracking-[0.22em] text-[#8c7b6c]">{t("footerSupport").replace("/ ", "")}</span>
         </button>
-        <div className="no-scrollbar flex items-center gap-4 overflow-x-auto py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#594d42] md:gap-7">
+        <div className="no-scrollbar col-span-3 flex min-w-0 items-center gap-3 overflow-x-auto py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#594d42] md:col-span-1 md:justify-center md:gap-3 md:tracking-[0.08em]">
           {navLinks.map((link) => (
-            <button key={link.id} onClick={link.action} className={`whitespace-nowrap py-1 transition-all duration-300 hover:text-[#2b2621] ${view === link.id ? "border-b-2 border-[#8c7b6c] text-[#8c7b6c]" : "opacity-70"}`}>{link.name}</button>
+            <button key={link.id} onClick={link.action} className={`shrink-0 whitespace-nowrap px-1 py-1 transition-all duration-300 hover:text-[#2b2621] ${view === link.id ? "border-b-2 border-[#8c7b6c] text-[#8c7b6c]" : "opacity-70"}`}>{link.name}</button>
           ))}
         </div>
-        <div className="ml-4 flex shrink-0 items-center gap-1 border-l border-[#e8dfd5] pl-4 text-[10px] font-bold tracking-widest">
+        <div className="col-start-3 row-start-1 flex h-8 w-[112px] shrink-0 items-center justify-center gap-1 border-l border-[#e8dfd5] pl-2 text-[10px] font-bold tracking-widest md:col-start-3">
           {["en", "pt", "es"].map((code) => (
             <button key={code} type="button" onClick={() => setLanguage(code)} aria-pressed={language === code} className={`px-1.5 py-1 transition-colors ${language === code ? "text-[#8c7b6c] underline underline-offset-4" : "text-[#594d42]/60 hover:text-[#2b2621]"}`}>{code.toUpperCase()}</button>
           ))}
         </div>
-        <button onClick={() => navigateTo("contact")} className="hidden whitespace-nowrap border border-[#8c7b6c] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#2b2621] transition-all duration-300 hover:bg-[#8c7b6c] hover:text-white xl:inline-flex">{t("workWithMe")}</button>
+        <button onClick={() => navigateTo("contact")} className="hidden h-10 w-[150px] items-center justify-center whitespace-nowrap border border-[#8c7b6c] px-2 text-[9px] font-bold uppercase tracking-[0.08em] text-[#2b2621] transition-all duration-300 hover:bg-[#8c7b6c] hover:text-white md:col-start-4 md:inline-flex">{t("workWithMe")}</button>
       </nav>
 
       <main className={`relative z-10 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
@@ -96,9 +98,9 @@ export default function SectionRenderer() {
             </div>
           </section>
           <Features variant="home" t={t} />
-          <Services services={serviceDetails} carouselRef={carouselRef} scrollCarousel={scrollCarousel} navigateTo={navigateTo} t={t} />
+          <Services services={localizedServices} carouselRef={carouselRef} scrollCarousel={scrollCarousel} navigateTo={navigateTo} t={t} />
         </>}
-        {view === "projects" && <Gallery projects={projectImages} navigateTo={navigateTo} t={t} />}
+        {view === "projects" && <Gallery projects={localizedProjects} navigateTo={navigateTo} t={t} />}
         {view === "about" && <Features variant="about" navigateTo={navigateTo} t={t} />}
         {activeService && <Services variant="detail" service={activeService} navigateTo={navigateTo} t={t} />}
         {view === "contact" && <Cta contactInfo={contactInfo} navigateTo={navigateTo} t={t} language={language} />}
