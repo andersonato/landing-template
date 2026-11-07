@@ -69,7 +69,7 @@ export default function SectionRenderer() {
           <span className="font-serif text-xs font-bold tracking-[0.18em] text-[#2b2621] sm:text-sm">ELISSANDRA OLIVEIRA</span>
           <span className="font-mono text-[8px] tracking-[0.22em] text-[#8c7b6c]">{t("footerSupport").replace("/ ", "")}</span>
         </button>
-        <div className="no-scrollbar col-span-3 flex min-w-0 items-center gap-3 overflow-x-auto py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#594d42] md:col-span-1 md:justify-center md:gap-3 md:tracking-[0.08em]">
+        <div className="no-scrollbar col-span-3 row-start-2 flex min-w-0 items-center gap-3 overflow-x-auto py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#594d42] md:col-span-1 md:row-start-1 md:justify-center md:gap-3 md:tracking-[0.08em]">
           {navLinks.map((link) => (
             <button key={link.id} onClick={link.action} className={`shrink-0 whitespace-nowrap px-1 py-1 transition-all duration-300 hover:text-[#2b2621] ${view === link.id ? "border-b-2 border-[#8c7b6c] text-[#8c7b6c]" : "opacity-70"}`}>{link.name}</button>
           ))}
