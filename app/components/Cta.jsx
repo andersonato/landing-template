@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { ArrowRight, Mail, MapPin, Phone, CheckCircle2 } from "lucide-react";
 
-export default function Cta({ contactInfo, navigateTo }) {
+export default function Cta({ contactInfo, navigateTo, t, language }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,10 +31,10 @@ export default function Cta({ contactInfo, navigateTo }) {
     );
 
     const body = encodeURIComponent(
-      `Name / Architecture Office: ${formData.name}\n` +
+      `{t("nameOffice")}: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
       `Service: ${formData.service}\n\n` +
-      `Project Brief & Deadlines:\n${formData.message}`
+      `{t("projectBrief")}:\n${formData.message}`
     );
 
     window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
@@ -46,11 +46,11 @@ export default function Cta({ contactInfo, navigateTo }) {
     <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-24">
       <div className="mb-14">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
-          Contact
+          {t("contact")}
         </span>
 
         <h1 className="mt-5 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">
-          Let's Discuss Your Project.
+          {t("contactHeading")}
         </h1>
 
         <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-[#75685c]">
@@ -63,11 +63,11 @@ export default function Cta({ contactInfo, navigateTo }) {
         <div className="space-y-8 lg:col-span-4">
           <div>
             <h2 className="font-serif text-2xl text-[#2b2621]">
-              Direct Contact
+              Direct {t("contact")}
             </h2>
 
             <p className="mt-3 text-sm font-light leading-relaxed text-[#75685c]">
-              You can contact me directly through the details below.
+              {t("directContactDesc")}
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function Cta({ contactInfo, navigateTo }) {
 
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
-                Phone / WhatsApp
+                {t("phoneWhatsapp")}
               </p>
 
               <p className="mt-1 text-sm text-[#2b2621]">
@@ -112,7 +112,7 @@ export default function Cta({ contactInfo, navigateTo }) {
 
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
-                Location
+                {t("location")}
               </p>
 
               <p className="mt-1 text-sm text-[#2b2621]">
@@ -123,14 +123,14 @@ export default function Cta({ contactInfo, navigateTo }) {
 
           <div className="border-l-2 border-[#d8c3b0] bg-[#faf6f0] p-6">
             <p className="font-serif text-lg italic leading-relaxed text-[#594d42]">
-              "Flexible architectural support, whenever your practice needs it."
+              "{t("contactQuote")}"
             </p>
           </div>
         </div>
 
         <div className="border border-[#e6ddd3] bg-white p-7 md:p-10 lg:col-span-8">
           <h2 className="mb-8 font-serif text-2xl text-[#2b2621]">
-            Send an Inquiry
+            {t("sendInquiry")}
           </h2>
 
           {submitted ? (
@@ -139,7 +139,7 @@ export default function Cta({ contactInfo, navigateTo }) {
 
               <div>
                 <h3 className="font-serif text-xl text-[#2b2621]">
-                  Your email application has been opened.
+                  {t("emailOpened")}
                 </h3>
 
                 <p className="mt-2 text-sm font-light leading-relaxed text-[#75685c]">
@@ -153,7 +153,7 @@ export default function Cta({ contactInfo, navigateTo }) {
               <div className="grid gap-6 md:grid-cols-2">
                 <label className="block">
                   <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
-                    Name / Architecture Office
+                    {t("nameOffice")}
                   </span>
 
                   <input
@@ -162,13 +162,13 @@ export default function Cta({ contactInfo, navigateTo }) {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
-                    placeholder="Your name or office"
+                    placeholder="{t("yourName")}"
                   />
                 </label>
 
                 <label className="block">
                   <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
-                    Email Address
+                    {t("emailAddress")}
                   </span>
 
                   <input
@@ -185,7 +185,7 @@ export default function Cta({ contactInfo, navigateTo }) {
 
               <label className="block">
                 <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
-                  Service Required
+                  {t("serviceRequired")}
                 </span>
 
                 <select
@@ -195,7 +195,7 @@ export default function Cta({ contactInfo, navigateTo }) {
                   onChange={handleChange}
                   className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none focus:border-[#8c7b6c]"
                 >
-                  <option value="">Select a service</option>
+                  <option value="">{t("selectService")}</option>
                   <option value="Architectural Drafting & Technical Documentation">
                     Architectural Drafting & Technical Documentation
                   </option>
@@ -208,13 +208,13 @@ export default function Cta({ contactInfo, navigateTo }) {
                   <option value="Flexible Team Support">
                     Flexible Team Support
                   </option>
-                  <option value="Other">Other</option>
+                  <option value="{t("other")}">{t("other")}</option>
                 </select>
               </label>
 
               <label className="block">
                 <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c]">
-                  Project Brief & Deadlines
+                  {t("projectBrief")}
                 </span>
 
                 <textarea
@@ -224,7 +224,7 @@ export default function Cta({ contactInfo, navigateTo }) {
                   onChange={handleChange}
                   rows={6}
                   className="w-full resize-y border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
-                  placeholder="Tell me about your project, requirements and expected deadlines..."
+                  placeholder="{t("projectPlaceholder")}"
                 />
               </label>
 
@@ -232,7 +232,7 @@ export default function Cta({ contactInfo, navigateTo }) {
                 type="submit"
                 className="inline-flex items-center gap-3 bg-[#2b2621] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#8c7b6c]"
               >
-                Send Inquiry
+                {t("send")}
                 <ArrowRight size={14} />
               </button>
 
