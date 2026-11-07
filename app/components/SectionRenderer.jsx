@@ -112,16 +112,19 @@ export default function SectionRenderer() {
         {view === "contact" && <Cta contactInfo={contactInfo} navigateTo={navigateTo} t={t} language={language} />}
       </main>
 
-      <footer className="relative z-10 border-t border-[#e8dfd5] bg-[#f4eee8] px-6 py-16 md:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-          <div className="flex items-center gap-2">
+      <footer className="relative z-10 border-t border-[#e8dfd5] bg-[#f4eee8] px-6 py-10 md:px-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-x-6 gap-y-7 md:grid-cols-[auto_minmax(0,1fr)_auto]">
+          <div className="flex min-w-0 items-center gap-3 whitespace-nowrap">
             <span className="font-serif text-sm font-bold tracking-widest text-[#2b2621]">ELISSANDRA OLIVEIRA</span>
-            <span className="font-mono text-[10px] text-[#8c7b6c]">{t("footerSupport")}</span>
+            <span className="font-mono text-[9px] text-[#8c7b6c]">{t("footerSupport")}</span>
           </div>
-          <div className="flex flex-wrap gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#594d42]">
-            {navLinks.map((link) => <button key={link.id} onClick={link.action} className="transition-colors hover:text-[#8c7b6c]">{link.name}</button>)}
+          <div className="flex min-w-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.1em] text-[#594d42] lg:flex-nowrap lg:gap-x-5">
+            {navLinks.map((link) => <button key={link.id} onClick={link.action} className="shrink-0 whitespace-nowrap transition-colors hover:text-[#8c7b6c]">{link.name}</button>)}
           </div>
-          <div className="font-mono text-[10px] text-[#8c7b6c]">{contactInfo.email} • {contactInfo.phone}</div>
+          <div className="whitespace-nowrap text-center font-mono text-[9px] text-[#8c7b6c] md:text-right">{contactInfo.email} <span className="px-1">•</span> {contactInfo.phone}</div>
+        </div>
+        <div className="mx-auto mt-7 max-w-7xl border-t border-[#e8dfd5] pt-3 text-center font-mono text-[8px] tracking-[0.08em] text-[#8c7b6c]">
+          {language === "pt" ? "© " + new Date().getFullYear() + " Elissandra Oliveira. Todos os direitos reservados." : language === "es" ? "© " + new Date().getFullYear() + " Elissandra Oliveira. Todos los derechos reservados." : "© " + new Date().getFullYear() + " Elissandra Oliveira. All rights reserved."}
         </div>
       </footer>
       <style jsx global>{`
