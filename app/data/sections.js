@@ -111,7 +111,7 @@ export const serviceDetails = {
 export const navigationLinks = [
   { id: "home", name: "HOME" },
   { id: "about", name: "ABOUT ME" },
-  { id: "projects", name: "PORTFOLIO PROJECTS" },
+  { id: "projects", name: "PORTFOLIO" },
   { id: "drafting", name: "DRAFTING" },
   { id: "modelling", name: "3D & VISUALISATION" },
   { id: "digitalisation", name: "DIGITALISATION" },
