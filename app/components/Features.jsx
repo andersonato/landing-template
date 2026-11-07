@@ -25,31 +25,23 @@ export default function Features({ variant = "home", navigateTo, t }) {
 
             <div className="mt-8 space-y-5 text-sm font-light leading-relaxed text-[#594d42]">
               <p>
-                I'm an architect based in Porto, Portugal, providing remote
-                technical support to architecture practices.
+                {t("aboutP1")}
               </p>
 
               <p>
-                Over the years, I've supported dozens of architects, helping
-                practices manage workloads, prepare technical documentation
-                and deliver projects efficiently.
+                {t("aboutP2")}
               </p>
 
               <p>
-                I also collaborate with a network of qualified architectural
-                professionals across Portugal, Spain and Brazil, allowing me
-                to provide flexible support according to each project's needs.
+                {t("aboutP3")}
               </p>
 
               <p>
-                Having lived and worked in Australia as an architectural
-                collaborator, I bring an international perspective to my work.
-                I communicate professionally in English, Portuguese and Spanish.
+                {t("aboutP4")}
               </p>
 
               <p>
-                My software experience includes AutoCAD, Revit, SketchUp,
-                Lumion, Photoshop and Illustrator.
+                {t("aboutP5")}
               </p>
             </div>
 
