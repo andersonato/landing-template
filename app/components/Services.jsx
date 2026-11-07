@@ -28,6 +28,7 @@ export default function Services({
   carouselRef,
   scrollCarousel,
   navigateTo,
+  t,
 }) {
   // SERVICE DETAIL PAGE
   if (variant === "detail" && service) {
