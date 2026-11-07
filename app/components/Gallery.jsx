@@ -15,7 +15,7 @@ export default function Gallery({ projects = [], navigateTo, t }) {
         <span className="font-mono text-xs text-[#8c7b6c]">{String(projects.length).padStart(2, "0")} {t("projects")}</span>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}
+        {projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} t={t} />)}
       </div>
       <div className="mt-20 border border-[#d8c3b0] bg-[#faf6f0] px-8 py-12 text-center md:px-16">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">{t("letsWork")}</span>
