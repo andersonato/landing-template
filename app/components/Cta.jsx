@@ -194,18 +194,10 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                   className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none focus:border-[#8c7b6c]"
                 >
                   <option value="">{t("selectService")}</option>
-                  <option value="Architectural Drafting & Technical Documentation">
-                    Architectural Drafting & Technical Documentation
-                  </option>
-                  <option value="3D Modelling and Rendering">
-                    3D Modelling and Rendering
-                  </option>
-                  <option value="Digitalisation & Image Editing">
-                    Digitalisation & Image Editing
-                  </option>
-                  <option value="Flexible Team Support">
-                    Flexible Team Support
-                  </option>
+                  <option value="Architectural Drafting & Technical Documentation">{language === "pt" ? "Desenho Técnico e Documentação de Arquitetura" : language === "es" ? "Dibujo Arquitectónico y Documentación Técnica" : "Architectural Drafting & Technical Documentation"}</option>
+                  <option value="3D Modelling and Rendering">{language === "pt" ? "Modelação 3D e Renderização" : language === "es" ? "Modelado 3D y Renderizado" : "3D Modelling and Rendering"}</option>
+                  <option value="Digitalisation & Image Editing">{language === "pt" ? "Digitalização e Edição de Imagem" : language === "es" ? "Digitalización y Edición de Imágenes" : "Digitalisation & Image Editing"}</option>
+                  <option value="Flexible Team Support">{language === "pt" ? "Apoio Flexível a Equipas" : language === "es" ? "Apoyo Flexible a Equipos" : "Flexible Team Support"}</option>
                   <option value="Other">{t("other")}</option>
                 </select>
               </label>
