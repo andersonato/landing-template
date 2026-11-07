@@ -242,11 +242,11 @@ export default function Services({
                   </span>
                 </div>
 
-                <h3 className="mb-4 min-h-[112px] font-serif text-xl font-bold leading-snug text-[#2b2621]">
+                <h3 className="mb-4 h-[112px] overflow-hidden font-serif text-xl font-bold leading-snug text-[#2b2621]">
                   {item.title}
                 </h3>
 
-                <p className="min-h-[84px] flex-1 text-xs font-light leading-7 text-[#594d42]">
+                <p className="h-[84px] overflow-hidden text-xs font-light leading-7 text-[#594d42]">
                   {item.tagline}
                 </p>
 
