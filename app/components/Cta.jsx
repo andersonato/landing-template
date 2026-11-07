@@ -54,8 +54,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
         </h1>
 
         <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-[#75685c]">
-          Tell me about your project, your requirements and your deadlines.
-          I'll be happy to discuss how I can support your practice.
+          {t("contactDescription")}
         </p>
       </div>
 
@@ -143,8 +142,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                 </h3>
 
                 <p className="mt-2 text-sm font-light leading-relaxed text-[#75685c]">
-                  Please review the message in your email application and
-                  send it to complete your inquiry.
+                  {t("emailOpenedDesc")}
                 </p>
               </div>
             </div>
@@ -162,7 +160,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
-                    placeholder="{t("yourName")}"
+                    placeholder={t("yourName")}
                   />
                 </label>
 
@@ -208,7 +206,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                   <option value="Flexible Team Support">
                     Flexible Team Support
                   </option>
-                  <option value="{t("other")}">{t("other")}</option>
+                  <option value="Other">{t("other")}</option>
                 </select>
               </label>
 
@@ -224,7 +222,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                   onChange={handleChange}
                   rows={6}
                   className="w-full resize-y border border-[#e6ddd3] bg-[#faf6f0] px-4 py-3 text-sm text-[#2b2621] outline-none transition-colors focus:border-[#8c7b6c]"
-                  placeholder="{t("projectPlaceholder")}"
+                  placeholder={t("projectPlaceholder")}
                 />
               </label>
 
@@ -237,8 +235,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
               </button>
 
               <p className="text-[10px] leading-relaxed text-[#a89787]">
-                Submitting opens your default email application with the
-                inquiry details prepared. You must send the email there.
+                {t("mailNotice")}
               </p>
             </form>
           )}
