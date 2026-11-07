@@ -18,7 +18,7 @@ import Gallery from "./Gallery";
 import Cta from "./Cta";
 
 export default function SectionRenderer() {
-  const [view, setView] = useState("home");
+  const [view, setView] = useState("home");\n  const [language, setLanguage] = useState("en");\n  const t = (key) => getTranslation(language, key);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function SectionRenderer() {
     if (requestedView === "projects") setView("projects");
   }, []);
 
-  const carouselRef = useRef(null);
+  const carouselRef = useRef(null);\n\n  useEffect(() => {\n    document.documentElement.lang = language;\n    window.localStorage.setItem("uptovai-language", language);\n  }, [language]);
 
   const navigateTo = useCallback(
     (newView) => {
@@ -81,7 +81,7 @@ export default function SectionRenderer() {
           </span>
 
           <span className="font-mono text-[8px] tracking-[0.22em] text-[#8c7b6c]">
-            ARCHITECT • TECHNICAL SUPPORT
+            {t("footerSupport").replace("/ ", "")}
           </span>
         </button>
 
@@ -105,7 +105,7 @@ export default function SectionRenderer() {
           onClick={() => navigateTo("contact")}
           className="hidden whitespace-nowrap border border-[#8c7b6c] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#2b2621] transition-all duration-300 hover:bg-[#8c7b6c] hover:text-white xl:inline-flex"
         >
-          Work With Me
+          {t("workWithMe")}
         </button>
       </nav>
 
@@ -165,7 +165,7 @@ export default function SectionRenderer() {
               </div>
             </section>
 
-            <Features variant="home" />
+            <Features variant="home" t={t} />
 
             <Services
               services={serviceDetails}
@@ -214,7 +214,7 @@ export default function SectionRenderer() {
             </span>
 
             <span className="font-mono text-[10px] text-[#8c7b6c]">
-              / ARCHITECTURAL SUPPORT
+              {t("footerSupport")}
             </span>
           </div>
 
