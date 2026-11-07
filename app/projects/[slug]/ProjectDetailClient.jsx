@@ -18,7 +18,7 @@ export default function ProjectDetailClient({ project }) {
   return (
     <main className="min-h-screen bg-[#fbf9f6] px-6 pb-24 pt-28 text-[#2b2621] md:px-12 lg:px-24">
       <div className="fixed right-6 top-5 z-[110] flex h-9 w-[112px] items-center justify-center gap-1 border border-[#e8dfd5] bg-[#fbf9f6]/95 text-[10px] font-bold tracking-widest backdrop-blur md:right-12">
-        {["en", "pt", "es"].map((code) => <button key={code} type="button" onClick={() => { setLanguage(code); window.localStorage.setItem("uptovai-language", code); document.documentElement.lang = code; }} aria-pressed={language === code} className={language === code ? "px-1.5 py-1 text-[#8c7b6c] underline underline-offset-4" : "px-1.5 py-1 text-[#594d42]/60"}>{code.toUpperCase()}</button>)}
+        {["en", "pt", "es"].map((code) => <button key={code} type="button" onClick={() => { setLanguage(code); window.localStorage.setItem("uptovai-language", code); document.documentElement.lang = code; window.dispatchEvent(new CustomEvent("uptovai-language-change", { detail: code })); }} aria-pressed={language === code} className={language === code ? "px-1.5 py-1 text-[#8c7b6c] underline underline-offset-4" : "px-1.5 py-1 text-[#594d42]/60"}>{code.toUpperCase()}</button>)}
       </div>
       <div className="mx-auto max-w-7xl">
         <Link href="/?view=projects" className="mb-10 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c7b6c] hover:text-[#2b2621]"><ArrowLeft size={14} />{t("backPortfolio")}</Link>
