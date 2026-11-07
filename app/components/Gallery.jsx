@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Gallery({ projects = [], navigateTo, t }) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-24">
+    <section className="mx-auto max-w-7xl px-6 pb-20 pt-32 md:px-12 lg:px-24">
       <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">{t("selectedWork")}</span>
