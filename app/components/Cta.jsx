@@ -31,10 +31,10 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
     );
 
     const body = encodeURIComponent(
-      `{t("nameOffice")}: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Service: ${formData.service}\n\n` +
-      `{t("projectBrief")}:\n${formData.message}`
+      `${t("nameOffice")}: ${formData.name}\n` +
+      `${t("emailAddress")}: ${formData.email}\n` +
+      `${t("serviceRequired")}: ${formData.service}\n\n` +
+      `${t("projectBrief")}:\n${formData.message}`
     );
 
     window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
@@ -78,7 +78,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
 
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
-                Email
+                {t("emailAddress")}
               </p>
 
               <p className="mt-1 text-sm text-[#2b2621]">
