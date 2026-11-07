@@ -27,7 +27,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
     event.preventDefault();
 
     const subject = encodeURIComponent(
-      `Architecture Service Inquiry - ${formData.service || "General Inquiry"}`
+      `${language === "pt" ? "Pedido de Serviço de Arquitetura" : language === "es" ? "Consulta de Servicios de Arquitectura" : "Architecture Service Inquiry"} - ${formData.service || (language === "pt" ? "Pedido Geral" : language === "es" ? "Consulta General" : "General Inquiry")}`
     );
 
     const body = encodeURIComponent(
@@ -62,7 +62,7 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
         <div className="space-y-8 lg:col-span-4">
           <div>
             <h2 className="font-serif text-2xl text-[#2b2621]">
-              Direct {t("contact")}
+              {t("directContact")}
             </h2>
 
             <p className="mt-3 text-sm font-light leading-relaxed text-[#75685c]">
