@@ -56,8 +56,8 @@ export default function Features({ variant = "home", navigateTo, t }) {
 
           <div className="relative">
             <img
-              src="/project-04.webp"
-              alt="Architectural project with covered outdoor dining area"
+              src="/about-me/foto%20profissional.webp"
+              alt="Elissandra Oliveira, architect"
               className="h-[520px] w-full object-cover"
             />
             <div className="absolute -bottom-5 -left-5 border border-[#d8c3b0] bg-[#faf6f0] px-7 py-5">
