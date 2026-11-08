@@ -8,9 +8,7 @@ export default function Gallery({ projects = [], navigateTo, t }) {
     <section className="mx-auto max-w-7xl px-6 pb-20 pt-32 md:px-12 lg:px-24">
       <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">{t("selectedWork")}</span>
-          <h1 className="mt-5 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">{t("portfolioHeading")}</h1>
-          <p className="mt-4 max-w-xl text-sm font-light leading-relaxed text-[#75685c]">{t("portfolioDescription")}</p>
+          <h1 className="font-serif text-4xl font-light text-[#2b2621] md:text-5xl">{t("selectedWork")}</h1>
         </div>
         <span className="font-mono text-xs text-[#8c7b6c]">{String(projects.length).padStart(2, "0")} {t("projects")}</span>
       </div>
