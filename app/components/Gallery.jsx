@@ -10,7 +10,6 @@ export default function Gallery({ projects = [], navigateTo, t }) {
         <div>
           <h1 className="font-serif text-4xl font-light text-[#2b2621] md:text-5xl">{t("selectedWork")}</h1>
         </div>
-        <span className="font-mono text-xs text-[#8c7b6c]">{String(projects.length).padStart(2, "0")} {t("projects")}</span>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}
