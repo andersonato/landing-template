@@ -96,31 +96,35 @@ function DraftingPortfolio({ language = "en" }) {
   return (
     <>
       <div className="w-full overflow-hidden border border-[#e8dfd5] bg-white p-3">
-        <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth">
+        <div
+          className="no-scrollbar flex h-[420px] flex-col gap-3 overflow-y-auto overscroll-contain scroll-smooth pr-1"
+          aria-label={language === "pt" ? "Galerias de desenho técnico" : language === "es" ? "Galerías de dibujo técnico" : "Technical drawing galleries"}
+        >
           {collections.map((collection, index) => (
             <button
               key={collection.id}
               type="button"
               onClick={() => openCollection(collection.id)}
               aria-label={language === "pt" ? `Abrir galeria de ${collection.title}` : language === "es" ? `Abrir galería de ${collection.title}` : `Open ${collection.title} gallery`}
-              className="group relative h-[320px] w-[88%] shrink-0 snap-start overflow-hidden border border-[#e8dfd5] bg-[#f4eee8] text-left md:h-[450px] md:w-[88%]"
+              className="group relative flex h-[190px] min-h-[190px] w-full shrink-0 cursor-pointer items-center justify-center overflow-hidden border border-[#e8dfd5] bg-[#faf9f7] text-left outline-none transition-colors hover:border-[#8c7b6c] focus-visible:ring-2 focus-visible:ring-[#8c7b6c]"
             >
               <img
                 src={collection.cover}
                 alt={collection.title}
                 loading={index === 0 ? "eager" : "lazy"}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                draggable="false"
+                className="h-full w-full object-contain p-1 transition-transform duration-300 group-hover:scale-[1.02]"
               />
-              <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#2b2621]/80 px-5 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <span className="absolute bottom-0 left-0 right-0 flex h-9 items-center justify-between bg-[#2b2621]/85 px-4 text-[9px] font-bold uppercase tracking-[0.2em] text-white">
                 {collection.title}
-                <ArrowRight size={16} />
+                <ArrowRight size={15} />
               </span>
             </button>
           ))}
         </div>
         <div className="flex items-center justify-between px-1 pt-3 font-mono text-[9px] uppercase tracking-[0.16em] text-[#8c7b6c]">
-          <span>{language === "pt" ? "Deslize para explorar" : language === "es" ? "Desliza para explorar" : "Scroll to explore"}</span>
-          <span>01 / 03</span>
+          <span>{language === "pt" ? "Role para explorar e selecione um quadro" : language === "es" ? "Desplázate y selecciona un panel" : "Scroll and select a board"}</span>
+          <span>03</span>
         </div>
       </div>
 
