@@ -66,7 +66,7 @@ const projectTranslations = {
     "contemporary-loft-interior": {title:"Contemporary Loft Interior with Mezzanine",category:"Interior Architecture · 3D Visualisation",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."}
   },
   pt: {
-    "casa-hu": {title:"Casa HU — Moradia Moderna com Ginásio e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Projeto de arquitetura residencial contemporânea com piscina, zonas exteriores de convívio e ginásio integrado."},
+    "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
     "luxury-residence-patio": {title:"Moradia Contemporânea de um Piso",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso, com jardim, estacionamento coberto e zona exterior de refeições."},
     "hillside-villa-complex": {title:"Moradia Contemporânea com Piscina e Zona Exterior",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso com piscina, deck em madeira, zona de refeições coberta e jardim."},
     "covered-outdoor-dining": {title:"Zona Exterior de Refeições Coberta e Fachada em Madeira",category:"Arquitetura Residencial · Visualização 3D",description:"Espaço contemporâneo de refeições ao ar livre integrado numa fachada em madeira e numa zona exterior ajardinada."},
@@ -80,7 +80,7 @@ const projectTranslations = {
     "natural-stone-infinity-pool": {title:"Moradia em Pedra Natural e Piscina Infinita",category:"Modelação 3D e Exteriores"}
   },
   es: {
-    "casa-hu": {title:"Casa HU — Vivienda Moderna con Gimnasio y Piscina",category:"Arquitectura Residencial · Visualización 3D",description:"Proyecto de arquitectura residencial contemporánea con piscina, zonas exteriores y gimnasio integrado."},
+    "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
     "luxury-residence-patio": {title:"Vivienda Contemporánea de una Planta",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de una planta con jardín, aparcamiento cubierto y zona exterior de comedor."},
     "hillside-villa-complex": {title:"Vivienda Contemporánea con Piscina y Zona Exterior",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de una planta con piscina, tarima de madera, comedor exterior cubierto y jardín."},
     "covered-outdoor-dining": {title:"Comedor Exterior Cubierto y Fachada de Madera",category:"Arquitectura Residencial · Visualización 3D",description:"Espacio contemporáneo de comedor al aire libre integrado en una fachada de madera y un entorno exterior ajardinado."},
