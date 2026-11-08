@@ -71,9 +71,8 @@ export default function SectionRenderer() {
     <div className="min-h-screen overflow-x-hidden bg-[#fbf9f6] font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(#8c7b6c_1px,transparent_1px)] opacity-20 [background-size:24px_24px]" />
       <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 border-b border-[#e8dfd5] bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
-        <button onClick={() => navigateTo("home")} className="flex cursor-pointer flex-col text-left">
-          <span className="font-serif text-xs font-bold tracking-[0.18em] text-[#2b2621] sm:text-sm">ELISSANDRA OLIVEIRA</span>
-          <span className="font-mono text-[8px] tracking-[0.22em] text-[#8c7b6c]">{t("footerSupport").replace("/ ", "")}</span>
+        <button onClick={() => navigateTo("home")} aria-label="Elissandra Oliveira — Home" className="flex h-[50px] w-[132px] cursor-pointer items-center overflow-hidden text-left">
+          <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="w-full max-w-none translate-y-[-29px]" />
         </button>
         <div className="no-scrollbar col-span-3 flex min-w-0 items-center gap-3 overflow-x-auto py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#594d42] md:col-span-1 md:justify-center md:gap-3 md:tracking-[0.08em]">
           {navLinks.map((link) => (
@@ -114,9 +113,8 @@ export default function SectionRenderer() {
 
       <footer className="relative z-10 border-t border-[#e8dfd5] bg-[#f4eee8] px-6 py-10 md:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-x-6 gap-y-7 md:grid-cols-[auto_minmax(0,1fr)_auto]">
-          <div className="flex min-w-0 items-center gap-3 whitespace-nowrap">
-            <span className="font-serif text-sm font-bold tracking-widest text-[#2b2621]">ELISSANDRA OLIVEIRA</span>
-            <span className="font-mono text-[9px] text-[#8c7b6c]">{t("footerSupport")}</span>
+          <div className="flex h-[46px] w-[122px] min-w-0 items-center overflow-hidden">
+            <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="w-full max-w-none translate-y-[-27px]" />
           </div>
           <div className="flex min-w-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.1em] text-[#594d42] lg:flex-nowrap lg:gap-x-5">
             {navLinks.map((link) => <button key={link.id} onClick={link.action} className="shrink-0 whitespace-nowrap transition-colors hover:text-[#8c7b6c]">{link.name}</button>)}
