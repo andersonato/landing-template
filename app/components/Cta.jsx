@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Mail, MapPin, Phone, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, CheckCircle2, Globe } from "lucide-react";
 
 export default function Cta({ contactInfo, navigateTo, t, language }) {
   const [formData, setFormData] = useState({
@@ -66,31 +66,14 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-20 pt-32 md:px-12 lg:px-24">
       <div className="mb-14">
-        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
-          {t("contact")}
-        </span>
-
         <h1 className="mt-5 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">
           {t("contactHeading")}
         </h1>
 
-        <p className="mt-5 max-w-2xl text-sm font-light leading-relaxed text-[#75685c]">
-          {t("contactDescription")}
-        </p>
       </div>
 
       <div className="grid gap-14 lg:grid-cols-12">
         <div className="space-y-8 lg:col-span-4">
-          <div>
-            <h2 className="font-serif text-2xl text-[#2b2621]">
-              {t("directContact")}
-            </h2>
-
-            <p className="mt-3 text-sm font-light leading-relaxed text-[#75685c]">
-              {t("directContactDesc")}
-            </p>
-          </div>
-
           <a
             href={`mailto:${contactInfo.email}`}
             className="flex items-start gap-4"
@@ -136,7 +119,19 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
               </p>
 
               <p className="mt-1 text-sm text-[#2b2621]">
-                {contactInfo.location}
+                Portugal - Spain - Brazil
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <Globe className="mt-1 text-[#8c7b6c]" size={19} />
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#a89787]">
+                {t("serviceAvailability")}
+              </p>
+              <p className="mt-1 text-sm text-[#2b2621]">
+                Remote Worldwide
               </p>
             </div>
           </div>
@@ -268,9 +263,6 @@ export default function Cta({ contactInfo, navigateTo, t, language }) {
                 {!sending && <ArrowRight size={14} />}
               </button>
 
-              <p className="text-[10px] leading-relaxed text-[#a89787]">
-                {t("mailNotice")}
-              </p>
             </form>
           )}
         </div>
