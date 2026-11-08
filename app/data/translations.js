@@ -61,7 +61,7 @@ const serviceTranslations = {
 
 const projectTranslations = {
   en: {
-    "stone-residence-pool-mountain-views": {title:"Stone Residence with Pool & Mountain Views",category:"Residential Architecture · 3D Visualisation",description:"Contemporary residence featuring natural stone façades, a swimming pool, landscaped outdoor spaces and mountain views."},
+    "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Contemporary Luxury Interior",category:"Interior Architecture · 3D Visualisation",description:"Contemporary luxury interiors featuring an open-plan living and dining area, a refined kitchen and a warm, elegant bedroom."},
     "contemporary-loft-interior": {title:"Contemporary Loft Interior with Mezzanine",category:"Interior Architecture · 3D Visualisation",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."}
   },
@@ -72,7 +72,7 @@ const projectTranslations = {
     "covered-outdoor-dining": {title:"Single Residence",category:"Architecture · 3D",description:"Single Residence."},
     "two-storey-contemporary-villa": {title:"Two-Storey Contemporary House",category:"Architecture · 3D",description:"Two-storey contemporary house."},
     "terrace-barbecue-palm-garden": {title:"Modern Tropical House",category:"Architecture · 3D",description:"Modern Tropical House."},
-    "stone-residence-pool-mountain-views": {title:"Moradia em Pedra Natural com Piscina e Vista para a Montanha",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com fachadas em pedra natural, piscina, espaços exteriores ajardinados e vista para a montanha."},
+    "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Interior Contemporâneo de Luxo",category:"Arquitetura de Interiores · Visualização 3D",description:"Interiores contemporâneos de luxo, com sala de estar e jantar em espaço aberto, cozinha sofisticada e quarto acolhedor e elegante."},
     "contemporary-loft-interior": {title:"Loft Contemporâneo com Mezanino",category:"Arquitetura de Interiores · Visualização 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
@@ -86,7 +86,7 @@ const projectTranslations = {
     "covered-outdoor-dining": {title:"Single Residence",category:"Architecture · 3D",description:"Single Residence."},
     "two-storey-contemporary-villa": {title:"Two-Storey Contemporary House",category:"Architecture · 3D",description:"Two-storey contemporary house."},
     "terrace-barbecue-palm-garden": {title:"Modern Tropical House",category:"Architecture · 3D",description:"Modern Tropical House."},
-    "stone-residence-pool-mountain-views": {title:"Vivienda de Piedra Natural con Piscina y Vistas a la Montaña",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con fachadas de piedra natural, piscina, espacios exteriores ajardinados y vistas a la montaña."},
+    "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Interior Contemporáneo de Lujo",category:"Arquitectura de Interiores · Visualización 3D",description:"Interiores contemporáneos de lujo con salón y comedor de concepto abierto, cocina refinada y un dormitorio cálido y elegante."},
     "contemporary-loft-interior": {title:"Loft Contemporáneo con Entresuelo",category:"Arquitectura de Interiores · Visualización 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
