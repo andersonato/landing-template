@@ -67,7 +67,7 @@ const projectTranslations = {
   },
   pt: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
-    "luxury-residence-patio": {title:"Moradia Contemporânea de um Piso",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso, com jardim, estacionamento coberto e zona exterior de refeições."},
+    "luxury-residence-patio": {title:"Multy-Familiar Residence",category:"Architecture · 3D",description:"Multy-Familiar Residence."},
     "hillside-villa-complex": {title:"Moradia Contemporânea com Piscina e Zona Exterior",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso com piscina, deck em madeira, zona de refeições coberta e jardim."},
     "covered-outdoor-dining": {title:"Zona Exterior de Refeições Coberta e Fachada em Madeira",category:"Arquitetura Residencial · Visualização 3D",description:"Espaço contemporâneo de refeições ao ar livre integrado numa fachada em madeira e numa zona exterior ajardinada."},
     "two-storey-contemporary-villa": {title:"Moradia Contemporânea de Dois Pisos",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de dois pisos com fachada branca, cobertura em telha cerâmica, jardim e logradouro delimitado."},
@@ -81,7 +81,7 @@ const projectTranslations = {
   },
   es: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
-    "luxury-residence-patio": {title:"Vivienda Contemporánea de una Planta",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de una planta con jardín, aparcamiento cubierto y zona exterior de comedor."},
+    "luxury-residence-patio": {title:"Multy-Familiar Residence",category:"Architecture · 3D",description:"Multy-Familiar Residence."},
     "hillside-villa-complex": {title:"Vivienda Contemporánea con Piscina y Zona Exterior",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de una planta con piscina, tarima de madera, comedor exterior cubierto y jardín."},
     "covered-outdoor-dining": {title:"Comedor Exterior Cubierto y Fachada de Madera",category:"Arquitectura Residencial · Visualización 3D",description:"Espacio contemporáneo de comedor al aire libre integrado en una fachada de madera y un entorno exterior ajardinado."},
     "two-storey-contemporary-villa": {title:"Vivienda Contemporánea de Dos Plantas",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de dos plantas con fachada blanca, cubierta de teja cerámica, jardín y parcela delimitada."},
