@@ -125,3 +125,5 @@ export const contactInfo = {
   phone: "+351 914 052 658",
   location: "Porto, Portugal",
 };
+
+// Preview deployment test: harmless code comment.
