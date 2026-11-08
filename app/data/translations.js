@@ -62,7 +62,8 @@ const serviceTranslations = {
 const projectTranslations = {
   en: {
     "stone-residence-pool-mountain-views": {title:"Stone Residence with Pool & Mountain Views",category:"Residential Architecture · 3D Visualisation",description:"Contemporary residence featuring natural stone façades, a swimming pool, landscaped outdoor spaces and mountain views."},
-    "contemporary-luxury-interior": {title:"Contemporary Luxury Interior",category:"Interior Architecture · 3D Visualisation",description:"Contemporary luxury interiors featuring an open-plan living and dining area, a refined kitchen and a warm, elegant bedroom."}
+    "contemporary-luxury-interior": {title:"Contemporary Luxury Interior",category:"Interior Architecture · 3D Visualisation",description:"Contemporary luxury interiors featuring an open-plan living and dining area, a refined kitchen and a warm, elegant bedroom."},
+    "contemporary-loft-interior": {title:"Contemporary Loft Interior with Mezzanine",category:"Interior Architecture · 3D Visualisation",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."}
   },
   pt: {
     "casa-hu": {title:"Casa HU — Moradia Moderna com Ginásio e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Projeto de arquitetura residencial contemporânea com piscina, zonas exteriores de convívio e ginásio integrado."},
@@ -73,6 +74,7 @@ const projectTranslations = {
     "terrace-barbecue-palm-garden": {title:"Moradia Contemporânea com Terraço e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com amplo terraço exterior, zona de churrasqueira, varanda envidraçada, palmeiras e piscina."},
     "stone-residence-pool-mountain-views": {title:"Moradia em Pedra Natural com Piscina e Vista para a Montanha",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com fachadas em pedra natural, piscina, espaços exteriores ajardinados e vista para a montanha."},
     "contemporary-luxury-interior": {title:"Interior Contemporâneo de Luxo",category:"Arquitetura de Interiores · Visualização 3D",description:"Interiores contemporâneos de luxo, com sala de estar e jantar em espaço aberto, cozinha sofisticada e quarto acolhedor e elegante."},
+    "contemporary-loft-interior": {title:"Loft Contemporâneo com Mezanino",category:"Arquitetura de Interiores · Visualização 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
     "evening-poolside-pavilion": {title:"Pavilhão e Zona de Estar junto à Piscina ao Entardecer",category:"Estudo de Iluminação"},
     "natural-stone-infinity-pool": {title:"Moradia em Pedra Natural e Piscina Infinita",category:"Modelação 3D e Exteriores"}
@@ -86,6 +88,7 @@ const projectTranslations = {
     "terrace-barbecue-palm-garden": {title:"Vivienda Contemporánea con Terraza y Piscina",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con amplia terraza exterior, zona de barbacoa, balcón acristalado, palmeras y piscina."},
     "stone-residence-pool-mountain-views": {title:"Vivienda de Piedra Natural con Piscina y Vistas a la Montaña",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con fachadas de piedra natural, piscina, espacios exteriores ajardinados y vistas a la montaña."},
     "contemporary-luxury-interior": {title:"Interior Contemporáneo de Lujo",category:"Arquitectura de Interiores · Visualización 3D",description:"Interiores contemporáneos de lujo con salón y comedor de concepto abierto, cocina refinada y un dormitorio cálido y elegante."},
+    "contemporary-loft-interior": {title:"Loft Contemporáneo con Entresuelo",category:"Arquitectura de Interiores · Visualización 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
     "evening-poolside-pavilion": {title:"Pabellón y Zona de Estar junto a la Piscina al Anochecer",category:"Estudio de Iluminación"},
     "natural-stone-infinity-pool": {title:"Casa de Piedra Natural y Piscina Infinita",category:"Modelado 3D y Exterior"}
