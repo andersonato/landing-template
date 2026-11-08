@@ -236,14 +236,6 @@ export default function Services({
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <div className="mb-5 flex items-center gap-3">
-                  <Icon size={25} className="text-[#8c7b6c]" />
-
-                  <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#8c7b6c]">
-                    {t("coreService")}
-                  </span>
-                </div>
-
                 <h3 className="mb-4 font-serif text-xl font-bold leading-snug text-[#2b2621]">
                   {item.title}
                 </h3>
