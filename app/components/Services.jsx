@@ -46,12 +46,14 @@ export default function Services({
 
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <div className="mb-6 flex items-center gap-4">
-              <Icon size={34} className="text-[#8c7b6c]" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
-                {t("architecturalServices")}
-              </span>
-            </div>
+            {service.id !== "drafting" && (
+              <div className="mb-6 flex items-center gap-4">
+                <Icon size={34} className="text-[#8c7b6c]" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
+                  {t("architecturalServices")}
+                </span>
+              </div>
+            )}
 
             <h1 className="mb-6 font-serif text-3xl font-bold leading-tight text-[#2b2621] md:text-5xl">
               {service.title}
