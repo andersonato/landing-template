@@ -127,3 +127,4 @@ export const contactInfo = {
 };
 
 // Preview deployment test: harmless code comment.
+// Trigger Vercel Preview for the project translation changes.
