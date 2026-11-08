@@ -63,7 +63,7 @@ const projectTranslations = {
   en: {
     "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Contemporary Luxury Interior",category:"INTERIOR · 3D",description:"Contemporary luxury interiors featuring an open-plan living and dining area, a refined kitchen and a warm, elegant bedroom."},
-    "contemporary-loft-interior": {title:"Contemporary Loft Interior with Mezzanine",category:"Interior Architecture · 3D Visualisation",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."}
+    "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."}
   },
   pt: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
@@ -74,7 +74,7 @@ const projectTranslations = {
     "terrace-barbecue-palm-garden": {title:"Modern Tropical House",category:"Architecture · 3D",description:"Modern Tropical House."},
     "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Interior Contemporâneo de Luxo",category:"INTERIOR · 3D",description:"Interiores contemporâneos de luxo, com sala de estar e jantar em espaço aberto, cozinha sofisticada e quarto acolhedor e elegante."},
-    "contemporary-loft-interior": {title:"Loft Contemporâneo com Mezanino",category:"Arquitetura de Interiores · Visualização 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
+    "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
     "evening-poolside-pavilion": {title:"Pavilhão e Zona de Estar junto à Piscina ao Entardecer",category:"Estudo de Iluminação"},
     "natural-stone-infinity-pool": {title:"Moradia em Pedra Natural e Piscina Infinita",category:"Modelação 3D e Exteriores"}
@@ -88,7 +88,7 @@ const projectTranslations = {
     "terrace-barbecue-palm-garden": {title:"Modern Tropical House",category:"Architecture · 3D",description:"Modern Tropical House."},
     "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Mixed-Use Building."},
     "contemporary-luxury-interior": {title:"Interior Contemporáneo de Lujo",category:"INTERIOR · 3D",description:"Interiores contemporáneos de lujo con salón y comedor de concepto abierto, cocina refinada y un dormitorio cálido y elegante."},
-    "contemporary-loft-interior": {title:"Loft Contemporáneo con Entresuelo",category:"Arquitectura de Interiores · Visualización 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
+    "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
     "evening-poolside-pavilion": {title:"Pabellón y Zona de Estar junto a la Piscina al Anochecer",category:"Estudio de Iluminación"},
     "natural-stone-infinity-pool": {title:"Casa de Piedra Natural y Piscina Infinita",category:"Modelado 3D y Exterior"}
