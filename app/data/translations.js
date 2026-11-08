@@ -68,7 +68,7 @@ const projectTranslations = {
   pt: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
     "luxury-residence-patio": {title:"Multi-Family Residence",category:"Architecture · 3D",description:"Multi-Family Residence."},
-    "hillside-villa-complex": {title:"Moradia Contemporânea com Piscina e Zona Exterior",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso com piscina, deck em madeira, zona de refeições coberta e jardim."},
+    "hillside-villa-complex": {title:"House with pool & outdoor living",category:"Architecture · 3D",description:"House with pool and outdoor living."},
     "covered-outdoor-dining": {title:"Zona Exterior de Refeições Coberta e Fachada em Madeira",category:"Arquitetura Residencial · Visualização 3D",description:"Espaço contemporâneo de refeições ao ar livre integrado numa fachada em madeira e numa zona exterior ajardinada."},
     "two-storey-contemporary-villa": {title:"Moradia Contemporânea de Dois Pisos",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de dois pisos com fachada branca, cobertura em telha cerâmica, jardim e logradouro delimitado."},
     "terrace-barbecue-palm-garden": {title:"Moradia Contemporânea com Terraço e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com amplo terraço exterior, zona de churrasqueira, varanda envidraçada, palmeiras e piscina."},
@@ -82,7 +82,7 @@ const projectTranslations = {
   es: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
     "luxury-residence-patio": {title:"Multi-Family Residence",category:"Architecture · 3D",description:"Multi-Family Residence."},
-    "hillside-villa-complex": {title:"Vivienda Contemporánea con Piscina y Zona Exterior",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de una planta con piscina, tarima de madera, comedor exterior cubierto y jardín."},
+    "hillside-villa-complex": {title:"House with pool & outdoor living",category:"Architecture · 3D",description:"House with pool and outdoor living."},
     "covered-outdoor-dining": {title:"Comedor Exterior Cubierto y Fachada de Madera",category:"Arquitectura Residencial · Visualización 3D",description:"Espacio contemporáneo de comedor al aire libre integrado en una fachada de madera y un entorno exterior ajardinado."},
     "two-storey-contemporary-villa": {title:"Vivienda Contemporánea de Dos Plantas",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de dos plantas con fachada blanca, cubierta de teja cerámica, jardín y parcela delimitada."},
     "terrace-barbecue-palm-garden": {title:"Vivienda Contemporánea con Terraza y Piscina",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con amplia terraza exterior, zona de barbacoa, balcón acristalado, palmeras y piscina."},
