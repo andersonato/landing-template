@@ -68,9 +68,8 @@ export default function SectionRenderer() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#fbf9f6] font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(#8c7b6c_1px,transparent_1px)] opacity-20 [background-size:24px_24px]" />
-      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 border-b border-[#e8dfd5] bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
+    <div className="min-h-screen overflow-x-hidden bg-white font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
+      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 border-b border-[#e8dfd5] bg-white/95 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
         <button onClick={() => navigateTo("home")} aria-label="Elissandra Oliveira — Home" className="flex h-[72px] w-[160px] cursor-pointer items-center justify-start text-left">
           <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[140px] object-contain" />
         </button>
@@ -90,7 +89,7 @@ export default function SectionRenderer() {
       <main className={`relative z-10 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
         {view === "home" && <>
           <Hero navigateTo={navigateTo} scrollToSolutions={scrollToSolutions} t={t} />
-          <section className="relative z-10 border-y border-[#e8dfd5] bg-[#f4eee8] py-16">
+          <section className="relative z-10 border-y border-[#e8dfd5] bg-white py-16">
             <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-12 lg:px-24">
               {highlights.map((item) => {
                 const Icon = item.icon;
