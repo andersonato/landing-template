@@ -86,7 +86,7 @@ export default function SectionRenderer() {
         <button onClick={() => navigateTo("contact")} className="hidden h-10 w-[150px] items-center justify-center whitespace-nowrap border border-[#8c7b6c] px-2 text-[9px] font-bold uppercase tracking-[0.08em] text-[#2b2621] transition-all duration-300 hover:bg-[#8c7b6c] hover:text-white md:col-start-4 md:inline-flex">{t("workWithMe")}</button>
       </nav>
 
-      <main className={`relative z-10 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
+      <main className={`relative z-10 pt-28 md:pt-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
         {view === "home" && <>
           <Hero navigateTo={navigateTo} scrollToSolutions={scrollToSolutions} t={t} />
           <section className="relative z-10 border-y border-[#e8dfd5] bg-white py-16">
