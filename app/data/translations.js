@@ -60,6 +60,9 @@ const serviceTranslations = {
 };
 
 const projectTranslations = {
+  en: {
+    "stone-residence-pool-mountain-views": {title:"Stone Residence with Pool & Mountain Views",category:"Residential Architecture · 3D Visualisation",description:"Contemporary residence featuring natural stone façades, a swimming pool, landscaped outdoor spaces and mountain views."}
+  },
   pt: {
     "casa-hu": {title:"Casa HU — Moradia Moderna com Ginásio e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Projeto de arquitetura residencial contemporânea com piscina, zonas exteriores de convívio e ginásio integrado."},
     "luxury-residence-patio": {title:"Moradia Contemporânea de um Piso",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de um piso, com jardim, estacionamento coberto e zona exterior de refeições."},
@@ -67,7 +70,7 @@ const projectTranslations = {
     "covered-outdoor-dining": {title:"Zona Exterior de Refeições Coberta e Fachada em Madeira",category:"Arquitetura Residencial · Visualização 3D",description:"Espaço contemporâneo de refeições ao ar livre integrado numa fachada em madeira e numa zona exterior ajardinada."},
     "two-storey-contemporary-villa": {title:"Moradia Contemporânea de Dois Pisos",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea de dois pisos com fachada branca, cobertura em telha cerâmica, jardim e logradouro delimitado."},
     "terrace-barbecue-palm-garden": {title:"Moradia Contemporânea com Terraço e Piscina",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com amplo terraço exterior, zona de churrasqueira, varanda envidraçada, palmeiras e piscina."},
-    "glass-balcony-stone-elevation": {title:"Varanda de Vidro e Pormenor de Fachada em Pedra",category:"Desenho Técnico e 3D"},
+    "stone-residence-pool-mountain-views": {title:"Moradia em Pedra Natural com Piscina e Vista para a Montanha",category:"Arquitetura Residencial · Visualização 3D",description:"Moradia contemporânea com fachadas em pedra natural, piscina, espaços exteriores ajardinados e vista para a montanha."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
     "evening-poolside-pavilion": {title:"Pavilhão e Zona de Estar junto à Piscina ao Entardecer",category:"Estudo de Iluminação"},
     "natural-stone-infinity-pool": {title:"Moradia em Pedra Natural e Piscina Infinita",category:"Modelação 3D e Exteriores"}
@@ -79,7 +82,7 @@ const projectTranslations = {
     "covered-outdoor-dining": {title:"Comedor Exterior Cubierto y Fachada de Madera",category:"Arquitectura Residencial · Visualización 3D",description:"Espacio contemporáneo de comedor al aire libre integrado en una fachada de madera y un entorno exterior ajardinado."},
     "two-storey-contemporary-villa": {title:"Vivienda Contemporánea de Dos Plantas",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea de dos plantas con fachada blanca, cubierta de teja cerámica, jardín y parcela delimitada."},
     "terrace-barbecue-palm-garden": {title:"Vivienda Contemporánea con Terraza y Piscina",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con amplia terraza exterior, zona de barbacoa, balcón acristalado, palmeras y piscina."},
-    "glass-balcony-stone-elevation": {title:"Balcón de Vidrio y Detalle de Fachada de Piedra",category:"Dibujo Arquitectónico y 3D"},
+    "stone-residence-pool-mountain-views": {title:"Vivienda de Piedra Natural con Piscina y Vistas a la Montaña",category:"Arquitectura Residencial · Visualización 3D",description:"Vivienda contemporánea con fachadas de piedra natural, piscina, espacios exteriores ajardinados y vistas a la montaña."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
     "evening-poolside-pavilion": {title:"Pabellón y Zona de Estar junto a la Piscina al Anochecer",category:"Estudio de Iluminación"},
     "natural-stone-infinity-pool": {title:"Casa de Piedra Natural y Piscina Infinita",category:"Modelado 3D y Exterior"}
