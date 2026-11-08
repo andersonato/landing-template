@@ -15,15 +15,7 @@ export default function Features({ variant = "home", navigateTo, t }) {
       <section className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
-              {t("aboutTitle")}
-            </span>
-
-            <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-[#2b2621] md:text-5xl">
-              {t("hello")}
-            </h2>
-
-            <div className="mt-8 space-y-5 text-sm font-light leading-relaxed text-[#594d42]">
+            <div className="space-y-5 text-sm font-light leading-relaxed text-[#594d42]">
               <p>
                 {t("aboutP1")}
               </p>
@@ -60,14 +52,6 @@ export default function Features({ variant = "home", navigateTo, t }) {
               alt="Elissandra Oliveira, architect"
               className="h-[520px] w-full object-contain"
             />
-            <div className="absolute -bottom-5 -left-5 border border-[#d8c3b0] bg-[#faf6f0] px-7 py-5">
-              <p className="font-serif text-2xl italic text-[#2b2621]">
-                {t("architectureSupport")}
-              </p>
-              <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#8c7b6c]">
-                {t("portoPortugal")}
-              </p>
-            </div>
           </div>
         </div>
       </section>
