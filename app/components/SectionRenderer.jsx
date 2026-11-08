@@ -106,7 +106,7 @@ export default function SectionRenderer() {
         </>}
         {view === "projects" && <Gallery projects={localizedProjects} navigateTo={navigateTo} t={t} />}
         {view === "about" && <Features variant="about" navigateTo={navigateTo} t={t} />}
-        {activeService && <Services variant="detail" service={activeService} navigateTo={navigateTo} t={t} />}
+        {activeService && <Services variant="detail" service={activeService} navigateTo={navigateTo} t={t} language={language} />}
         {view === "contact" && <Cta contactInfo={contactInfo} navigateTo={navigateTo} t={t} language={language} />}
       </main>
 

@@ -1,6 +1,7 @@
 
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -12,6 +13,7 @@ import {
   FileText,
   Layers,
   UserCheck,
+  X,
 } from "lucide-react";
 
 const iconComponents = {
@@ -21,6 +23,171 @@ const iconComponents = {
   UserCheck,
 };
 
+
+function DraftingPortfolio({ language = "en" }) {
+  const [activeCollection, setActiveCollection] = useState(null);
+  const [activeImage, setActiveImage] = useState(0);
+
+  const labels = language === "pt"
+    ? ["Marcenaria", "Obra", "Pedras"]
+    : language === "es"
+      ? ["Carpintería", "Obra", "Piedra"]
+      : ["Joinery", "Construction", "Stonework"];
+
+  const collections = [
+    {
+      id: "marcenaria",
+      title: labels[0],
+      cover: "/images/drafting/marcenaria/marcenaria%20capa.webp",
+      images: [
+        "/images/drafting/marcenaria/marcenaria%20capa.webp",
+        ...[2, 3, 4, 5, 6, 7].map((n) => `/images/drafting/marcenaria/marcenaria%20${n}.webp`),
+      ],
+    },
+    {
+      id: "obra",
+      title: labels[1],
+      cover: "/images/drafting/obra/obra%20capa.webp",
+      images: [
+        "/images/drafting/obra/obra%20capa.webp",
+        ...[1, 2, 3, 4, 5, 6, 7].map((n) => `/images/drafting/obra/obra%20${n}.webp`),
+      ],
+    },
+    {
+      id: "pedras",
+      title: labels[2],
+      cover: "/images/drafting/pedras/pedra%20capa.webp",
+      images: [
+        "/images/drafting/pedras/pedra%20capa.webp",
+        ...[1, 2, 3, 4].map((n) => `/images/drafting/pedras/pedra%20${n}.webp`),
+      ],
+    },
+  ];
+
+  const selected = collections.find((collection) => collection.id === activeCollection);
+
+  useEffect(() => {
+    if (!selected) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setActiveCollection(null);
+      if (event.key === "ArrowRight") setActiveImage((index) => (index + 1) % selected.images.length);
+      if (event.key === "ArrowLeft") setActiveImage((index) => (index - 1 + selected.images.length) % selected.images.length);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [selected]);
+
+  const openCollection = (id) => {
+    setActiveImage(0);
+    setActiveCollection(id);
+  };
+  const closeCollection = () => {
+    setActiveCollection(null);
+    setActiveImage(0);
+  };
+  const previousImage = () => setActiveImage((index) => (index - 1 + selected.images.length) % selected.images.length);
+  const nextImage = () => setActiveImage((index) => (index + 1) % selected.images.length);
+
+  return (
+    <>
+      <div className="w-full overflow-hidden border border-[#e8dfd5] bg-white p-3">
+        <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth">
+          {collections.map((collection, index) => (
+            <button
+              key={collection.id}
+              type="button"
+              onClick={() => openCollection(collection.id)}
+              aria-label={language === "pt" ? `Abrir galeria de ${collection.title}` : language === "es" ? `Abrir galería de ${collection.title}` : `Open ${collection.title} gallery`}
+              className="group relative h-[320px] w-[88%] shrink-0 snap-start overflow-hidden border border-[#e8dfd5] bg-[#f4eee8] text-left md:h-[450px] md:w-[88%]"
+            >
+              <img
+                src={collection.cover}
+                alt={collection.title}
+                loading={index === 0 ? "eager" : "lazy"}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#2b2621]/80 px-5 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                {collection.title}
+                <ArrowRight size={16} />
+              </span>
+            </button>
+          ))}
+        </div>
+        <div className="flex items-center justify-between px-1 pt-3 font-mono text-[9px] uppercase tracking-[0.16em] text-[#8c7b6c]">
+          <span>{language === "pt" ? "Deslize para explorar" : language === "es" ? "Desliza para explorar" : "Scroll to explore"}</span>
+          <span>01 / 03</span>
+        </div>
+      </div>
+
+      {selected && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={selected.title}
+          onClick={closeCollection}
+          className="fixed inset-0 z-[300] flex flex-col bg-[#171717] text-white"
+        >
+          <div className="flex items-center justify-between border-b border-white/15 px-5 py-4 md:px-10">
+            <div>
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/55">
+                {language === "pt" ? "Portfólio técnico" : language === "es" ? "Portafolio técnico" : "Technical portfolio"}
+              </p>
+              <h2 className="mt-1 font-serif text-xl md:text-2xl">{selected.title}</h2>
+            </div>
+            <button
+              type="button"
+              onClick={closeCollection}
+              aria-label={language === "pt" ? "Fechar galeria" : language === "es" ? "Cerrar galería" : "Close gallery"}
+              className="flex h-11 w-11 items-center justify-center border border-white/30 transition-colors hover:bg-white hover:text-[#171717]"
+            >
+              <X size={21} />
+            </button>
+          </div>
+
+          <div className="relative flex min-h-0 flex-1 items-center justify-center px-3 py-5 md:px-16">
+            <button
+              type="button"
+              onClick={(event) => { event.stopPropagation(); previousImage(); }}
+              aria-label={language === "pt" ? "Imagem anterior" : language === "es" ? "Imagen anterior" : "Previous image"}
+              className="absolute left-3 z-10 flex h-10 w-10 items-center justify-center border border-white/35 bg-black/30 transition-colors hover:bg-white hover:text-[#171717] md:left-7 md:h-12 md:w-12"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <img
+              src={selected.images[activeImage]}
+              alt={`${selected.title} — ${activeImage + 1}`}
+              onClick={(event) => event.stopPropagation()}
+              className="max-h-full max-w-full select-none object-contain"
+            />
+            <button
+              type="button"
+              onClick={(event) => { event.stopPropagation(); nextImage(); }}
+              aria-label={language === "pt" ? "Próxima imagem" : language === "es" ? "Imagen siguiente" : "Next image"}
+              className="absolute right-3 z-10 flex h-10 w-10 items-center justify-center border border-white/35 bg-black/30 transition-colors hover:bg-white hover:text-[#171717] md:right-7 md:h-12 md:w-12"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          <div className="flex items-center justify-center gap-5 border-t border-white/15 px-5 py-4">
+            <span className="font-mono text-[10px] tracking-[0.18em] text-white/70 tabular-nums">
+              {String(activeImage + 1).padStart(2, "0")} / {String(selected.images.length).padStart(2, "0")}
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.18em] text-white/45">
+              {language === "pt" ? "Use as setas para navegar" : language === "es" ? "Usa las flechas para navegar" : "Use arrows to navigate"}
+            </span>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export default function Services({
   variant = "home",
   service,
@@ -29,6 +196,7 @@ export default function Services({
   scrollCarousel,
   navigateTo,
   t,
+  language = "en",
 }) {
   // SERVICE DETAIL PAGE
   if (variant === "detail" && service) {
@@ -72,13 +240,17 @@ export default function Services({
             </button>
           </div>
 
-          <div className="overflow-hidden border border-[#e8dfd5] bg-white p-3">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="h-[320px] w-full object-cover md:h-[450px]"
-            />
-          </div>
+          {service.id === "drafting" ? (
+            <DraftingPortfolio language={language} />
+          ) : (
+            <div className="overflow-hidden border border-[#e8dfd5] bg-white p-3">
+              <img
+                src={service.img}
+                alt={service.title}
+                className="h-[320px] w-full object-cover md:h-[450px]"
+              />
+            </div>
+          )}
         </div>
 
         <div className="mt-20 grid gap-12 border-t border-[#e8dfd5] pt-12 md:grid-cols-2">
