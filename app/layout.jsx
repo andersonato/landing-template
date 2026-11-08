@@ -2,6 +2,10 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://www.uptovai.com"),
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   title: "Elissandra Oliveira | Architectural Technical Support",
   description:
     "Remote architectural technical support for architecture practices: technical drafting, 3D modelling, visualisation and flexible project collaboration.",
