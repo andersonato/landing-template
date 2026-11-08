@@ -46,7 +46,7 @@ export default function Services({
 
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            {service.id !== "drafting" && service.id !== "modelling" && service.id !== "digitalisation" && (
+            {service.id !== "drafting" && service.id !== "modelling" && service.id !== "digitalisation" && service.id !== "support" && (
               <div className="mb-6 flex items-center gap-4">
                 <Icon size={34} className="text-[#8c7b6c]" />
                 <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#8c7b6c]">
