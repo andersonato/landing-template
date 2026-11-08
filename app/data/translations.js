@@ -1,5 +1,6 @@
 export const translations = {
   en: {
+    "two-bedroom-apartment": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D",description:"Two-Bedroom Apartment."},
     home:"HOME", about:"ABOUT ME", portfolio:"PORTFOLIO", drafting:"DRAFTING", modelling:"3D & VISUALISATION", digitalisation:"DIGITALISATION", support:"TEAM SUPPORT", contact:"CONTACT", workWithMe:"WORK WITH ME",
     heroTitle:"You focus on the ideas.", heroItalic:"I'll help you bring them to life.", heroDescription:"Reliable, professional remote technical support for architecture practices. Helping teams manage workloads, prepare technical documentation, and meet project deadlines effortlessly.", viewProjects:"View Real Projects", exploreServices:"Explore Services", featuredProject:"Featured Project", featuredTitle:"Modern Villa with Gym & Poolside Terrace", viewAll:"View All", heroImageAlt:"Modern Villa with Gym and Pool",
     meetDeadlines:"Meet Deadlines", meetDeadlinesDesc:"Stay on schedule even during peak workloads without stressing your team.", highQuality:"High-Quality Outputs", highQualityDesc:"Technical drawings and high-end visualisations tailored to your office standards.", flexible:"Flexible Collaboration", flexibleDesc:"Agreed scope and budget with flexible support whenever you need it.",
@@ -77,7 +78,7 @@ const projectTranslations = {
     "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
     "evening-poolside-pavilion": {title:"Pavilhão e Zona de Estar junto à Piscina ao Entardecer",category:"Estudo de Iluminação"},
-    "natural-stone-infinity-pool": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D"}
+    "two-bedroom-apartment": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D",description:"Two-Bedroom Apartment."}
   },
   es: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
@@ -91,7 +92,7 @@ const projectTranslations = {
     "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
     "evening-poolside-pavilion": {title:"Pabellón y Zona de Estar junto a la Piscina al Anochecer",category:"Estudio de Iluminación"},
-    "natural-stone-infinity-pool": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D"}
+    "two-bedroom-apartment": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D",description:"Two-Bedroom Apartment."}
   }
 };
 
