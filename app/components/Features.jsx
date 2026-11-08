@@ -58,7 +58,7 @@ export default function Features({ variant = "home", navigateTo, t }) {
             <img
               src="/about-me/foto%20profissional.webp"
               alt="Elissandra Oliveira, architect"
-              className="h-[520px] w-full object-cover object-top"
+              className="h-[520px] w-full object-contain"
             />
             <div className="absolute -bottom-5 -left-5 border border-[#d8c3b0] bg-[#faf6f0] px-7 py-5">
               <p className="font-serif text-2xl italic text-[#2b2621]">
