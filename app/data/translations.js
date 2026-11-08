@@ -77,7 +77,7 @@ const projectTranslations = {
     "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
     "dusk-stone-residence": {title:"Moradia em Pedra ao Anoitecer com Vista para a Montanha",category:"Visualização Atmosférica"},
     "evening-poolside-pavilion": {title:"Pavilhão e Zona de Estar junto à Piscina ao Entardecer",category:"Estudo de Iluminação"},
-    "natural-stone-infinity-pool": {title:"Moradia em Pedra Natural e Piscina Infinita",category:"Modelação 3D e Exteriores"}
+    "natural-stone-infinity-pool": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D"}
   },
   es: {
     "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"House extension project."},
@@ -91,7 +91,7 @@ const projectTranslations = {
     "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Interior contemporáneo con dormitorio en entreplanta, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
     "dusk-stone-residence": {title:"Vivienda de Piedra al Atardecer con Vistas a la Montaña",category:"Renderizado Atmosférico"},
     "evening-poolside-pavilion": {title:"Pabellón y Zona de Estar junto a la Piscina al Anochecer",category:"Estudio de Iluminación"},
-    "natural-stone-infinity-pool": {title:"Casa de Piedra Natural y Piscina Infinita",category:"Modelado 3D y Exterior"}
+    "natural-stone-infinity-pool": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D"}
   }
 };
 
