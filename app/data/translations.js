@@ -61,41 +61,29 @@ const serviceTranslations = {
 };
 
 const projectTranslations = {
-  en: {
-    "casa-hu": {title:"House Extension",category:"Architecture · 3D",description:"Contemporary residential architecture with swimming pool, outdoor living areas and integrated gym."},
-    "luxury-residence-patio": {title:"Multi-Family Residence",category:"Architecture · 3D",description:"Contemporary single-storey residence with landscaped gardens, covered parking and outdoor dining areas."},
-    "hillside-villa-complex": {title:"House with Pool & Outdoor Living",category:"Architecture · 3D",description:"Contemporary single-storey residence with a swimming pool, timber sun deck, covered outdoor dining and landscaped garden."},
-    "covered-outdoor-dining": {title:"Single Residence",category:"Architecture · 3D",description:"Contemporary outdoor dining space integrated with a warm timber facade and landscaped exterior setting."},
-    "two-storey-contemporary-villa": {title:"Two-Storey Contemporary House",category:"Architecture · 3D",description:"Contemporary two-storey residence with a white rendered facade, terracotta roof tiles, landscaped garden and enclosed front courtyard."},
-    "terrace-barbecue-palm-garden": {title:"Modern Tropical House",category:"Architecture · 3D",description:"Contemporary residence with a generous outdoor terrace, barbecue area, glass balcony, palm trees and swimming pool."},
-    "stone-residence-pool-mountain-views": {title:"Mixed-Use Building",category:"Architecture · 3D",description:"Contemporary residence featuring natural stone façades, a swimming pool, landscaped outdoor spaces and mountain views."},
-    "contemporary-luxury-interior": {title:"Contemporary Luxury Interior",category:"INTERIOR · 3D",description:"Contemporary luxury interiors featuring an open-plan living and dining area, a refined kitchen and a warm, elegant bedroom."},
-    "contemporary-loft-interior": {title:"Contemporary Loft with Mezzanine",category:"INTERIOR · 3D",description:"Contemporary loft interior combining a mezzanine bedroom, compact open-plan kitchen and living area, warm timber finishes and a refined green-and-charcoal palette."},
-    "two-bedroom-apartment": {title:"Two-Bedroom Apartment",category:"INTERIOR · 3D",description:"Two-Bedroom Apartment."}
-  },
   pt: {
-    "casa-hu": {title:"Ampliação de Moradia",category:"Arquitetura · 3D",description:"Projeto de arquitetura residencial contemporânea com piscina, espaços exteriores de lazer e ginásio integrado."},
-    "luxury-residence-patio": {title:"Edifício Residencial Multifamiliar",category:"Arquitetura · 3D",description:"Moradia contemporânea de um piso, com jardins ajardinados, estacionamento coberto e zona de refeições exterior."},
-    "hillside-villa-complex": {title:"Moradia com Piscina e Espaços Exteriores",category:"Arquitetura · 3D",description:"Moradia contemporânea de um piso, com piscina, deck em madeira, zona de refeições exterior coberta e jardim."},
-    "covered-outdoor-dining": {title:"Moradia Unifamiliar",category:"Arquitetura · 3D",description:"Espaço de refeições exterior contemporâneo, integrado numa fachada acolhedora em madeira e numa envolvente ajardinada."},
-    "two-storey-contemporary-villa": {title:"Moradia Contemporânea de Dois Pisos",category:"Arquitetura · 3D",description:"Moradia contemporânea de dois pisos, com fachada branca, telhado de telha cerâmica, jardim e pátio frontal delimitado."},
-    "terrace-barbecue-palm-garden": {title:"Moradia Tropical Moderna",category:"Arquitetura · 3D",description:"Moradia contemporânea com um amplo terraço exterior, zona de barbecue, varanda envidraçada, palmeiras e piscina."},
-    "stone-residence-pool-mountain-views": {title:"Edifício de Uso Misto",category:"Arquitetura · 3D",description:"Edifício contemporâneo com fachadas em pedra natural, piscina, espaços exteriores ajardinados e vistas para a montanha."},
-    "contemporary-luxury-interior": {title:"Interior Contemporâneo de Luxo",category:"INTERIOR · 3D",description:"Interiores contemporâneos de luxo, com sala de estar e jantar em espaço aberto, cozinha sofisticada e quarto acolhedor e elegante."},
-    "contemporary-loft-interior": {title:"Loft Contemporâneo com Mezanino",category:"INTERIOR · 3D",description:"Interior contemporâneo com quarto em mezanino, cozinha compacta em espaço aberto, sala de estar, acabamentos em madeira e uma paleta elegante de verde e antracite."},
-    "two-bedroom-apartment": {title:"Apartamento T2",category:"INTERIOR · 3D",description:"Projeto de design de interiores de um apartamento T2."}
+    "casa-hu": {title:"Ampliação de Moradia",category:"Arquitetura · 3D",description:"Arquitetura residencial contemporânea com piscina, áreas de estar exteriores e ginásio integrado."},
+    "luxury-residence-patio": {title:"Residência Multifamiliar",category:"Arquitetura · 3D",description:"Residência contemporânea de um piso com jardins ajardinados, estacionamento coberto e áreas de refeições exteriores."},
+    "hillside-villa-complex": {title:"Moradia com Piscina e Espaços Exteriores",category:"Arquitetura · 3D",description:"Residência contemporânea de um piso com piscina, deck de madeira, área de refeições exterior coberta e jardim ajardinado."},
+    "covered-outdoor-dining": {title:"Moradia Unifamiliar",category:"Arquitetura · 3D",description:"Área de refeições exterior contemporânea integrada com uma fachada acolhedora em madeira e um ambiente exterior ajardinado."},
+    "two-storey-contemporary-villa": {title:"Moradia Contemporânea de Dois Pisos",category:"Arquitetura · 3D",description:"Residência contemporânea de dois pisos com fachada branca rebocada, telhado de telha terracota, jardim ajardinado e pátio frontal fechado."},
+    "terrace-barbecue-palm-garden": {title:"Moradia Tropical Moderna",category:"Arquitetura · 3D",description:"Residência contemporânea com um amplo terraço exterior, área de barbecue, varanda de vidro, palmeiras e piscina."},
+    "stone-residence-pool-mountain-views": {title:"Edifício de Uso Misto",category:"Arquitetura · 3D",description:"Residência contemporânea com fachadas em pedra natural, piscina, espaços exteriores ajardinados e vistas para a montanha."},
+    "contemporary-luxury-interior": {title:"Interior Contemporâneo de Luxo",category:"INTERIOR · 3D",description:"Interiores contemporâneos de luxo com sala de estar e jantar em espaço aberto, cozinha requintada e um quarto acolhedor e elegante."},
+    "contemporary-loft-interior": {title:"Loft Contemporâneo com Mezanino",category:"INTERIOR · 3D",description:"Interior de loft contemporâneo que combina um quarto em mezanino, cozinha compacta em espaço aberto e sala de estar, acabamentos em madeira quente e uma paleta refinada de verde e carvão."},
+    "two-bedroom-apartment": {title:"Apartamento de Dois Quartos",category:"INTERIOR · 3D",description:"Apartamento de Dois Quartos."}
   },
   es: {
-    "casa-hu": {title:"Ampliación de Vivienda",category:"Arquitectura · 3D",description:"Proyecto de arquitectura residencial contemporánea con piscina, zonas exteriores de ocio y gimnasio integrado."},
-    "luxury-residence-patio": {title:"Edificio Residencial Plurifamiliar",category:"Arquitectura · 3D",description:"Vivienda contemporánea de una planta, con jardines, aparcamiento cubierto y zona de comedor exterior."},
-    "hillside-villa-complex": {title:"Vivienda con Piscina y Espacios Exteriores",category:"Arquitectura · 3D",description:"Vivienda contemporánea de una planta, con piscina, solárium de madera, comedor exterior cubierto y jardín."},
-    "covered-outdoor-dining": {title:"Vivienda Unifamiliar",category:"Arquitectura · 3D",description:"Espacio de comedor exterior contemporáneo integrado con una cálida fachada de madera y un entorno ajardinado."},
-    "two-storey-contemporary-villa": {title:"Vivienda Contemporánea de Dos Plantas",category:"Arquitectura · 3D",description:"Vivienda contemporánea de dos plantas, con fachada blanca, cubierta de teja cerámica, jardín y patio delantero cerrado."},
-    "terrace-barbecue-palm-garden": {title:"Vivienda Tropical Moderna",category:"Arquitectura · 3D",description:"Vivienda contemporánea con una amplia terraza exterior, zona de barbacoa, balcón acristalado, palmeras y piscina."},
-    "stone-residence-pool-mountain-views": {title:"Edificio de Uso Mixto",category:"Arquitectura · 3D",description:"Edificio contemporáneo con fachadas de piedra natural, piscina, espacios exteriores ajardinados y vistas a la montaña."},
+    "casa-hu": {title:"Ampliación de Vivienda",category:"Arquitectura · 3D",description:"Arquitectura residencial contemporánea con piscina, zonas de estar al aire libre y gimnasio integrado."},
+    "luxury-residence-patio": {title:"Residencia Multifamiliar",category:"Arquitectura · 3D",description:"Residencia contemporánea de una planta con jardines, aparcamiento cubierto y zonas de comedor al aire libre."},
+    "hillside-villa-complex": {title:"Vivienda con Piscina y Espacios Exteriores",category:"Arquitectura · 3D",description:"Residencia contemporánea de una planta con piscina, terraza de madera, zona de comedor exterior cubierta y jardín."},
+    "covered-outdoor-dining": {title:"Vivienda Unifamiliar",category:"Arquitectura · 3D",description:"Zona de comedor exterior contemporánea integrada con una cálida fachada de madera y un entorno exterior ajardinado."},
+    "two-storey-contemporary-villa": {title:"Vivienda Contemporánea de Dos Plantas",category:"Arquitectura · 3D",description:"Residencia contemporánea de dos plantas con fachada blanca enfoscada, tejado de tejas color terracota, jardín y patio delantero cerrado."},
+    "terrace-barbecue-palm-garden": {title:"Vivienda Tropical Moderna",category:"Arquitectura · 3D",description:"Residencia contemporánea con una amplia terraza exterior, zona de barbacoa, balcón de cristal, palmeras y piscina."},
+    "stone-residence-pool-mountain-views": {title:"Edificio de Uso Mixto",category:"Arquitectura · 3D",description:"Residencia contemporánea con fachadas de piedra natural, piscina, espacios exteriores ajardinados y vistas a la montaña."},
     "contemporary-luxury-interior": {title:"Interior Contemporáneo de Lujo",category:"INTERIOR · 3D",description:"Interiores contemporáneos de lujo con salón y comedor de concepto abierto, cocina refinada y un dormitorio cálido y elegante."},
-    "contemporary-loft-interior": {title:"Loft Contemporáneo con Altillo",category:"INTERIOR · 3D",description:"Interior contemporáneo con dormitorio en altillo, cocina compacta de concepto abierto, salón, acabados en madera y una elegante paleta de verde y antracita."},
-    "two-bedroom-apartment": {title:"Apartamento de Dos Dormitorios",category:"INTERIOR · 3D",description:"Proyecto de diseño interior de un apartamento de dos dormitorios."}
+    "contemporary-loft-interior": {title:"Loft Contemporáneo con Entrepiso",category:"INTERIOR · 3D",description:"Interior de loft contemporáneo que combina un dormitorio en entrepiso, cocina compacta de concepto abierto y salón, acabados cálidos de madera y una paleta refinada de verde y carbón."},
+    "two-bedroom-apartment": {title:"Apartamento de Dos Dormitorios",category:"INTERIOR · 3D",description:"Apartamento de Dos Dormitorios."}
   }
 };
 
