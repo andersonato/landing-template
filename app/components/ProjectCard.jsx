@@ -12,7 +12,6 @@ export default function ProjectCard({ project, index = 0 }) {
       </div>
       <div className="flex items-start justify-between gap-4 border-b border-[#e6ddd3] py-4">
         <div><h3 className="font-serif text-lg text-[#2b2621] transition-colors group-hover:text-[#8c7b6c]">{project.title}</h3><p className="mt-1 text-[9px] font-bold uppercase tracking-[0.18em] text-[#8c7b6c]">{project.category}</p></div>
-        <span className="pt-1 font-mono text-xs text-[#a89787]">{String(index + 1).padStart(2, "0")}</span>
       </div>
     </Link>
   );
