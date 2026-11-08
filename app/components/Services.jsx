@@ -183,10 +183,6 @@ export default function Services({
     >
       <div className="mb-12 flex items-end justify-between gap-6">
         <div>
-          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-[#8c7b6c]">
-            {t("servicesOffered")}
-          </span>
-
           <h2 className="mt-3 max-w-2xl font-serif text-3xl text-[#2b2621] md:text-4xl">
             {t("servicesHeading")}
           </h2>
