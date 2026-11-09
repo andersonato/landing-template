@@ -18,7 +18,7 @@ export const serviceDetails = {
     icon: "FileText",
     tagline:
       "Preparation of clear, detailed architectural drawings to support project development.",
-    img: "/project-07.webp",
+    img: "/images/drafting/marcenaria/marcenaria%205.webp",
     deliverables: [
       "2D Technical Drafting",
       "Floor Plans & Elevations",
