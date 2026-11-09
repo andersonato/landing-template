@@ -21,7 +21,7 @@ export default function Hero({ navigateTo, scrollToSolutions, t }) {
             </span>
           </h1>
 
-          <p className="max-w-2xl text-base font-light leading-relaxed text-[#594d42] sm:text-lg">
+          <p className="max-w-2xl text-base font-light leading-relaxed text-white sm:text-lg">
             {t("heroDescription")}
           </p>
 
