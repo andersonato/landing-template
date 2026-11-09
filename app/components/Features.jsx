@@ -4,9 +4,6 @@ const solutionKeys = [
   ["meetDeadlines", "meetDeadlinesDesc"],
   ["highQuality", "highQualityDesc"],
   ["flexible", "flexibleDesc"],
-  ["peakWorkloads", "peakWorkloadsDesc"],
-  ["expandTeam", "expandTeamDesc"],
-  ["international", "internationalDesc"],
 ];
 
 export default function Features({ variant = "home", navigateTo, t }) {

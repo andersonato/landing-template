@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Grid } from "lucide-react";
 import { getTranslation, getLocalizedService, getLocalizedProject } from "../data/translations";
 import { projectImages, serviceDetails, navigationLinks, contactInfo } from "../data/sections";
 import Hero from "./Hero";
@@ -84,11 +85,26 @@ export default function SectionRenderer() {
       <main className={`relative z-10 pt-28 md:pt-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
         {view === "home" && <>
           <Hero t={t} />
-          <section className="relative z-10 bg-white px-6 py-14 md:px-12 lg:px-24">
-            <div className="mx-auto max-w-7xl">
-              <p className="max-w-4xl text-base font-light leading-relaxed text-[#594d42] md:text-lg">
+          <section className="relative z-10 bg-white px-6 py-14 text-center md:px-12 lg:px-24">
+            <div className="mx-auto flex max-w-4xl flex-col items-center">
+              <p className="max-w-4xl text-base font-light leading-relaxed text-[#2b2621] md:text-lg">
                 {t("heroDescription")}
               </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+                <button
+                  onClick={() => navigateTo("projects")}
+                  className="flex items-center gap-3 bg-[#2b2621] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-white transition-all hover:bg-[#8c7b6c]"
+                >
+                  {t("viewProjects")}
+                  <Grid size={14} />
+                </button>
+                <button
+                  onClick={scrollToSolutions}
+                  className="border border-[#b8a798] bg-white px-8 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-[#2b2621] transition-all hover:bg-[#f4eee8]"
+                >
+                  {t("exploreServices")}
+                </button>
+              </div>
             </div>
           </section>
           <Features variant="home" t={t} />
