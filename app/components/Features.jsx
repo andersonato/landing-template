@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 
 const solutionKeys = [
-  ["extraSupport", "extraSupportDesc"],
-  ["specificTasks", "specificTasksDesc"],
-  ["presentations", "presentationsDesc"],
+  ["meetDeadlines", "meetDeadlinesDesc"],
+  ["highQuality", "highQualityDesc"],
+  ["flexible", "flexibleDesc"],
   ["peakWorkloads", "peakWorkloadsDesc"],
   ["expandTeam", "expandTeamDesc"],
   ["international", "internationalDesc"],
@@ -72,13 +72,9 @@ export default function Features({ variant = "home", navigateTo, t }) {
         </div>
 
         <div className="grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {solutionKeys.map(([needKey, solutionKey], index) => (
+          {solutionKeys.map(([needKey, solutionKey]) => (
             <div key={needKey} className="border-t border-[#d8c3b0] pt-5">
-              <span className="font-mono text-xs text-[#a89787]">
-                0{index + 1}
-              </span>
-
-              <h3 className="mt-3 font-serif text-xl text-[#2b2621]">
+              <h3 className="font-serif text-xl text-[#2b2621]">
                 {t(needKey)}
               </h3>
 

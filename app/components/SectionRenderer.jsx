@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Clock, FileText, UserCheck } from "lucide-react";
 import { getTranslation, getLocalizedService, getLocalizedProject } from "../data/translations";
 import { projectImages, serviceDetails, navigationLinks, contactInfo } from "../data/sections";
 import Hero from "./Hero";
@@ -61,11 +60,7 @@ export default function SectionRenderer() {
   const localizedProjects = projectImages.map((project) => getLocalizedProject(project, language));
   const localizedServices = Object.fromEntries(Object.entries(serviceDetails).map(([key, service]) => [key, getLocalizedService(service, language)]));
 
-  const highlights = [
-    { icon: Clock, title: "meetDeadlines", description: "meetDeadlinesDesc" },
-    { icon: FileText, title: "highQuality", description: "highQualityDesc" },
-    { icon: UserCheck, title: "flexible", description: "flexibleDesc" },
-  ];
+
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
@@ -88,17 +83,12 @@ export default function SectionRenderer() {
 
       <main className={`relative z-10 pt-28 md:pt-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
         {view === "home" && <>
-          <Hero navigateTo={navigateTo} scrollToSolutions={scrollToSolutions} t={t} />
-          <section className="relative z-10 border-y border-[#e8dfd5] bg-white py-16">
-            <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-12 lg:px-24">
-              {highlights.map((item) => {
-                const Icon = item.icon;
-                return <div key={item.title} className="space-y-3 border border-[#e8dfd5] bg-white/60 p-6">
-                  <Icon size={24} className="text-[#8c7b6c]" />
-                  <h4 className="font-serif text-lg font-bold">{t(item.title)}</h4>
-                  <p className="text-xs leading-relaxed text-[#594d42]">{t(item.description)}</p>
-                </div>;
-              })}
+          <Hero t={t} />
+          <section className="relative z-10 bg-white px-6 py-14 md:px-12 lg:px-24">
+            <div className="mx-auto max-w-7xl">
+              <p className="max-w-4xl text-base font-light leading-relaxed text-[#594d42] md:text-lg">
+                {t("heroDescription")}
+              </p>
             </div>
           </section>
           <Features variant="home" t={t} />
