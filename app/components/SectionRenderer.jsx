@@ -69,7 +69,7 @@ export default function SectionRenderer() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
-      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-8 after:h-8 after:bg-gradient-to-b after:from-[#fbf9f6]/90 after:to-transparent after:content-[''] md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
+      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
         <button onClick={() => navigateTo("home")} aria-label="Elissandra Oliveira — Home" className="flex h-[72px] w-[160px] cursor-pointer items-center justify-start text-left">
           <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[140px] object-contain" />
         </button>
@@ -110,7 +110,7 @@ export default function SectionRenderer() {
         {view === "contact" && <Cta contactInfo={contactInfo} navigateTo={navigateTo} t={t} language={language} />}
       </main>
 
-      <footer className="relative z-10 bg-[#f4eee8] px-6 py-10 md:px-12 before:pointer-events-none before:absolute before:inset-x-0 before:-top-8 before:h-8 before:bg-gradient-to-t before:from-[#f4eee8] before:to-transparent before:content-['']">
+      <footer className="relative z-10 bg-[#f4eee8] px-6 py-10 md:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-x-6 gap-y-7 md:grid-cols-[auto_minmax(0,1fr)_auto]">
           <div className="flex h-[62px] w-[130px] min-w-0 items-center">
             <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[120px] object-contain" />
