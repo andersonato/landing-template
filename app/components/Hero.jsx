@@ -7,16 +7,16 @@ export default function Hero({ navigateTo, scrollToSolutions, t }) {
         src="/projects/covered-outdoor-dining/image-02.webp"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center brightness-[0.86]"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-white/35 via-white/10 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-black/10" />
 
       <div className="mx-auto w-full max-w-7xl">
         <div className="max-w-2xl space-y-8">
           <h1 className="font-serif text-4xl font-light leading-[1.1] tracking-tight text-[#2b2621] sm:text-6xl lg:text-7xl">
             {t("heroTitle")}
             <br />
-            <span className="font-normal italic text-[#8c7b6c]">
+            <span className="font-normal italic text-white">
               {t("heroItalic")}
             </span>
           </h1>
