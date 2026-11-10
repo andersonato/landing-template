@@ -97,35 +97,20 @@ main {
   margin: 0;
 }
 
-/* Home hero: festive, stagger-free text entrance */
-@keyframes home-festa-reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(16px) scale(0.88) rotate(-2deg);
-    filter: blur(5px);
+/* Home hero: subtle blur-to-sharp text reveal */
+@keyframes home-blur-reveal {
+  from {
+    filter: blur(8px);
+    opacity: 0.35;
   }
-  45% {
-    opacity: 1;
-    transform: translateY(-3px) scale(1.035) rotate(1deg);
+  to {
     filter: blur(0);
-  }
-  65% {
-    transform: translateY(1px) scale(0.99) rotate(-0.4deg);
-  }
-  82% {
-    transform: translateY(-1px) scale(1.01) rotate(0.2deg);
-  }
-  100% {
     opacity: 1;
-    transform: translateY(0) scale(1) rotate(0);
-    filter: blur(0);
   }
 }
 
 .home-blur-reveal {
-  display: inline-block;
-  transform-origin: left center;
-  animation: home-festa-reveal 2.6s cubic-bezier(0.22, 1, 0.36, 1) 3s both;
+  animation: home-blur-reveal 1.2s ease-out 2s both;
 }
 
 @media (prefers-reduced-motion: reduce) {
