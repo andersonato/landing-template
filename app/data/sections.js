@@ -87,11 +87,12 @@ export const serviceDetails = {
 
   support: {
     id: "support",
-    title: "FLEXIBLE TEAM SUPPORT & PEAK WORKLOADS",
+    title: "FLEXIBLE TEAM SUPPORT",
     icon: "UserCheck",
     tagline:
       "Reliable, remote collaboration without expanding your in-house headcount.",
-    img: "/project-10.webp",
+    img: "/images/services/team-support/team-support-cover.webp",
+    detailImg: "/team-support/team-support-page-cover.webp",
     deliverables: [
       "Extra Support for Peak Workloads",
       "Specific Task Execution with Clear Deliverables",

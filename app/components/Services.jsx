@@ -402,7 +402,7 @@ export default function Services({
               <div className="h-52 w-full overflow-hidden border-b border-[#f0e6dc]">
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt={item.cardTitle || item.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
