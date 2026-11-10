@@ -65,7 +65,7 @@ export default function SectionRenderer() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
-      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px_150px] md:gap-5 md:px-12">
+      <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px] md:gap-5 md:px-12">
         <button onClick={() => navigateTo("home")} aria-label="Elissandra Oliveira — Home" className="flex h-[72px] w-[160px] cursor-pointer items-center justify-start text-left">
           <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[140px] object-contain" />
         </button>
@@ -79,7 +79,6 @@ export default function SectionRenderer() {
             <button key={code} type="button" onClick={() => setLanguage(code)} aria-pressed={language === code} className={`px-1.5 py-1 transition-colors ${language === code ? "text-[#8c7b6c] underline underline-offset-4" : "text-[#594d42]/60 hover:text-[#2b2621]"}`}>{code.toUpperCase()}</button>
           ))}
         </div>
-        <button onClick={() => navigateTo("contact")} className="hidden h-10 w-[150px] items-center justify-center whitespace-nowrap border border-[#8c7b6c] px-2 text-[9px] font-bold uppercase tracking-[0.08em] text-[#2b2621] transition-all duration-300 hover:bg-[#8c7b6c] hover:text-white md:col-start-4 md:inline-flex">{t("workWithMe")}</button>
       </nav>
 
       <main className={`relative z-10 pt-28 md:pt-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
