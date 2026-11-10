@@ -409,7 +409,7 @@ export default function Services({
 
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="mb-4 font-serif text-xl font-bold leading-snug text-[#2b2621]">
-                  {item.title}
+                  {item.cardTitle || item.title}
                 </h3>
 
                 <p className="flex-1 text-xs font-light leading-7 text-[#594d42]">
