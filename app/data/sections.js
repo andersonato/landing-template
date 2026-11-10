@@ -63,11 +63,12 @@ export const serviceDetails = {
 
   digitalisation: {
     id: "digitalisation",
-    title: "DIGITALISATION & IMAGE EDITING",
+    title: "DIGITALISATION",
     icon: "Compass",
     tagline:
       "Conversion of hand drawings to CAD, image retouching, and presentation graphics.",
-    img: "/project-04.webp",
+    img: "/images/services/digitalisation/digitalisation-cover.webp",
+    detailImg: "/digitalisation/digitalisation-page-cover.webp",
     deliverables: [
       "Conversion of Hand Sketches to CAD/BIM",
       "Image Retouching & Post-Production",

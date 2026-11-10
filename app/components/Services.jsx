@@ -249,7 +249,7 @@ export default function Services({
           ) : (
             <div className="overflow-hidden border border-[#e8dfd5] bg-white p-3">
               <img
-                src={service.img}
+                src={service.detailImg || service.img}
                 alt={service.title}
                 className="h-[320px] w-full object-cover md:h-[450px]"
               />
