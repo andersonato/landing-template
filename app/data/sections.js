@@ -37,7 +37,7 @@ export const serviceDetails = {
 
   modelling: {
     id: "modelling",
-    title: "3D MODELLING AND EXTERIOR / INTERIOR RENDERING",
+    title: "3D MODELLING & VISUALISATION",
     icon: "Layers",
     tagline:
       "Exterior & interior views designed to showcase design, materials, and spatial relationships.",
