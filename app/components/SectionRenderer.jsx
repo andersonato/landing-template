@@ -67,7 +67,7 @@ export default function SectionRenderer() {
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-[#2b2621] selection:bg-[#d8c3b0]/40">
       <nav className="fixed z-[100] grid w-full grid-cols-[minmax(150px,1fr)_auto_auto] items-center gap-3 bg-[#fbf9f6]/90 px-4 py-5 backdrop-blur-md md:grid-cols-[220px_minmax(0,1fr)_112px] md:gap-5 md:px-12">
         <button onClick={() => navigateTo("home")} aria-label="Elissandra Oliveira — Home" className="flex h-[72px] w-[160px] cursor-pointer items-center justify-start text-left">
-          <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[140px] object-contain" />
+          <img src="/brand/oliveira-brand-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[140px] object-contain" />
         </button>
         <div className="no-scrollbar col-span-3 flex min-w-0 items-center gap-3 overflow-x-auto py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#594d42] md:col-span-1 md:justify-center md:gap-3 md:tracking-[0.08em]">
           {navLinks.map((link) => (
@@ -118,7 +118,7 @@ export default function SectionRenderer() {
       <footer className="relative z-10 bg-[#f4eee8] px-6 py-10 md:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-x-6 gap-y-7 md:grid-cols-[auto_minmax(0,1fr)_auto]">
           <div className="flex h-[62px] w-[130px] min-w-0 items-center">
-            <img src="/brand/elissandra-oliveira-logo-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[120px] object-contain" />
+            <img src="/brand/oliveira-brand-transparent.webp" alt="Elissandra Oliveira — Architectural Support" className="block h-auto w-[120px] object-contain" />
           </div>
           <div className="flex min-w-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.1em] text-[#594d42] lg:flex-nowrap lg:gap-x-5">
             {navLinks.map((link) => <button key={link.id} onClick={link.action} className="shrink-0 whitespace-nowrap transition-colors hover:text-[#8c7b6c]">{link.name}</button>)}
