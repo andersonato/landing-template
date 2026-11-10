@@ -107,6 +107,8 @@ export const serviceDetails = {
     ],
     fullContent:
       "Every practice experiences peak periods. We join your team as an external collaborator whenever you need us, taking care of technical tasks so you meet deadlines effortlessly without long-term commitments.",
+    collaboratorBio:
+      "Bárbara Delgado is an architect specializing in Architecture and Urban Design, with over six years of international experience and a background in graphic design at Nokia. She holds a Master’s degree from BME and is a PhD candidate at MATE, Hungary. She is currently based in Valencia, Spain.",
   },
 };
 

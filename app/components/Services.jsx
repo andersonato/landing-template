@@ -235,6 +235,12 @@ export default function Services({
               {service.fullContent || service.tagline}
             </p>
 
+            {service.id === "support" && service.collaboratorBio && (
+              <p className="mb-8 text-sm leading-8 text-[#594d42]">
+                {service.collaboratorBio}
+              </p>
+            )}
+
             <button
               onClick={() => navigateTo?.("contact")}
               className="inline-flex items-center gap-3 bg-[#8c7b6c] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-[#2b2621]"
