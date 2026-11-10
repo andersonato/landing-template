@@ -14,7 +14,7 @@ export default function Hero({ t }) {
           <h1 className="font-serif text-4xl font-light leading-[1.1] tracking-tight text-[#2b2621] sm:text-6xl lg:text-7xl">
             {t("heroTitle")}
             <br />
-            <span className="font-normal italic text-white">
+            <span className="home-blur-reveal font-normal italic text-white">
               {t("heroItalic")}
             </span>
           </h1>

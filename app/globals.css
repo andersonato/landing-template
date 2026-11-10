@@ -96,3 +96,25 @@ main {
   color: var(--muted);
   margin: 0;
 }
+
+/* Home hero: subtle blur-to-sharp text reveal */
+@keyframes home-blur-reveal {
+  from {
+    filter: blur(8px);
+    opacity: 0.35;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.home-blur-reveal {
+  animation: home-blur-reveal 1.2s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-blur-reveal {
+    animation: none;
+  }
+}

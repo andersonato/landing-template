@@ -9,7 +9,7 @@ const solutionKeys = [
 export default function Features({ variant = "home", navigateTo, t }) {
   if (variant === "about") {
     return (
-      <section className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-24">
+      <section className="mx-auto max-w-7xl px-6 pb-24 pt-36 md:px-12 md:pt-40 lg:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
             <h2 className="mb-7 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">
