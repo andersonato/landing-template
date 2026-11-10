@@ -45,7 +45,7 @@ export default function Features({ variant = "home", navigateTo, t }) {
 
           <div className="relative">
             <img
-              src="/about-me/foto%20profissional.webp"
+              src="/about-me/about-me-portrait.webp"
               alt="Elissandra Oliveira, architect"
               className="h-[520px] w-full object-contain"
             />
