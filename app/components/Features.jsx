@@ -12,6 +12,9 @@ export default function Features({ variant = "home", navigateTo, t }) {
       <section className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
+            <h2 className="mb-7 font-serif text-4xl font-light text-[#2b2621] md:text-5xl">
+              {t("hello")}
+            </h2>
             <div className="space-y-5 text-sm font-light leading-relaxed text-[#594d42]">
               <p>
                 {t("aboutP1")}
